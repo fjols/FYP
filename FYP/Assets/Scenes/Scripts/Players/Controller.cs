@@ -13,6 +13,11 @@ public class Controller : MonoBehaviour
     public string m_sLeftHorizontalAxis;
     public string m_sLeftVerticalAxis;
 
+    public string m_sRightHorizontalAxis;
+    public string m_sRightVerticalAxis;
+
+    public Transform firePoint;
+
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>(); // Get the component.
@@ -26,8 +31,9 @@ public class Controller : MonoBehaviour
     void Update()
     {
         Vector2 moveInput = new Vector2(Input.GetAxisRaw(m_sLeftHorizontalAxis), -Input.GetAxisRaw(m_sLeftVerticalAxis)); // Get the axises the player is using.
+        Vector2 rightMoveInput = new Vector2(Input.GetAxisRaw(m_sRightHorizontalAxis), Input.GetAxisRaw(m_sRightVerticalAxis));
         m_moveVel = moveInput * m_fSpeed; // Move velocity.
-        m_fheadingAngle = Mathf.Atan2(moveInput.y, moveInput.x) * Mathf.Rad2Deg; // Set the heading angle.
+        m_fheadingAngle = Mathf.Atan2(moveInput.y, moveInput.x) * Mathf.Rad2Deg; // Set the heading angle
         transform.rotation = Quaternion.AngleAxis(m_fheadingAngle, Vector3.forward); // Use the heading angle to rotate the player in the direction they are moving.
     }
 }
