@@ -55,9 +55,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scenes\Scripts\Players\Controller.cs" />
-     <Compile Include="Assets\Scenes\Scripts\Players\Shooting\Bullet.cs" />
-     <Compile Include="Assets\Scenes\Scripts\Players\Shooting\Shooting.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_One\EnemyOneController.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Players\Controller.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Players\Shooting\Bullet.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Players\Shooting\Shooting.cs" />
+     <None Include="Assets\Game Assets\Art\Spaceship-shooter-environment\readme.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Charlie.CHARLIE-SAN/Desktop/Code/FYP/FYP/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
