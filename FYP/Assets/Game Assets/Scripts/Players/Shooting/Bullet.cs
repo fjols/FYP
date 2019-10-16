@@ -6,33 +6,23 @@ using UnityEngine;
     This class will make be a template for a bullet in the game.
     It will hold values such as its speed.
  */
-
+[System.Serializable]
 public class Bullet : MonoBehaviour
 {
     // Attributes
     [SerializeField]
-    private float m_fSpeed; // The speed the bullet will be travelling at.
+    protected float m_fSpeed; // The speed the bullet will be travelling at.
     
     [SerializeField]
-    private float m_fLifetime; // The lifetime of the bullet.
+    protected float m_fLifetime; // The lifetime of the bullet.
     
-    void Start()
+    protected virtual void Start()
     {
-        Invoke("DestroyProjectile", m_fLifetime);
+        Invoke("DestroyProjectile", m_fLifetime); // Destroy the bullet after a certain amount of time.
     }
 
-    void Update()
+    protected virtual void DestroyProjectile()
     {
-        transform.Translate(transform.up * m_fSpeed * Time.deltaTime);
-    }
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        Debug.Log("HIT");
-    }
-
-    void DestroyProjectile()
-    {
-        Destroy(gameObject);
+        Destroy(gameObject); // Destroy the gameobject.
     }
 }
