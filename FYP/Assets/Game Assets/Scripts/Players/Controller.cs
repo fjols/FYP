@@ -15,9 +15,13 @@ public class Controller : MonoBehaviour
     public string m_sLeftVerticalAxis; // Holds a string that is the left joystick vertical axis.
     public Transform firePoint; // Where the bullet spawns.
 
+    Animator m_anim; // The animator component.
+    private bool m_bDead = false; // Is the player dead.
+
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>(); // Get the component.
+        m_anim = GetComponent<Animator>(); // Get the animator component.
     }
 
     void FixedUpdate()
@@ -29,5 +33,14 @@ public class Controller : MonoBehaviour
     {
         Vector2 moveInput = new Vector2(Input.GetAxisRaw(m_sLeftHorizontalAxis), Input.GetAxisRaw(m_sLeftVerticalAxis)); // Get the axises the player is using.
         m_moveVel = moveInput.normalized * m_fSpeed; // Move velocity.
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+
+        m_bDead = true; // Set it to true it will play the death animation.
+        m_fSpeed = 0; // Set speed to 0.
+        m_anim.SetBool("Death", m_bDead); // Set the animator to play the animation
+        Destroy(gameObject, 1f); // Destroy the enemy after the animations played.
     }
 }

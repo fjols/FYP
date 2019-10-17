@@ -28,4 +28,13 @@ public class EnemyOneBullet : Bullet
         transform.position = pos + transform.right * Mathf.Sin(Time.time * m_fWaveFrequency) * m_fMovingMagnitude; // Move it in a sine wave.
         transform.localScale = new Vector3(4f, 4f, 4f) * Mathf.Sin(m_fWaveFrequency * Time.time) * m_fMagnitude; // Scale the bullet in a sine wave.
     }
+
+    void OnCollision2D(Collision2D col)
+    {
+        if(col.gameObject.tag == "Player")
+        {
+            Debug.Log("HIT");
+            Destroy(gameObject);
+        }
+    }
 }
