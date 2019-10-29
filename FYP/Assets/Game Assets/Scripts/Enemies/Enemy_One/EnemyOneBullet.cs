@@ -13,6 +13,7 @@ public class EnemyOneBullet : Bullet
     public float m_fMagnitude; // Magnitude. 
     public float m_fMovingMagnitude; // Magnitude. 
     Vector3 pos; // Position.
+    private Shake shake;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -33,8 +34,8 @@ public class EnemyOneBullet : Bullet
     {
         if(col.gameObject.tag == "Player")
         {
-            Debug.Log("HIT");
             Destroy(gameObject);
+            shake.TriggerShake(2f);
         }
     }
 }
