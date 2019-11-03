@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 1748012305289578639}
   - component: {fileID: 1748012305289578636}
   m_Layer: 0
-  m_Name: Enemy_One 1
+  m_Name: Enemy_One
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,6 +207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_fSpeed: 1
+  m_fWaveFrequency: 2.5
+  m_fMagnitude: 0.5
 --- !u!95 &1748012305289578639
 Animator:
   serializedVersion: 3

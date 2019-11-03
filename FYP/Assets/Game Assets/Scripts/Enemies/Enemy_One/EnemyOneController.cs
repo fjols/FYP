@@ -14,8 +14,8 @@ public class EnemyOneController : MonoBehaviour
     private Rigidbody2D rb; // Rigidbody component.
     Vector3 pos; // Position.
 
-    public float m_fWaveFrequency; // How fast the sine wave moves.
-    public float m_fMagnitude; // The magnitude.
+    public float m_fWaveFrequency = 2.5f; // How fast the sine wave moves.
+    public float m_fMagnitude = 0.5f; // The magnitude.
 
     void Start()
     {
@@ -30,16 +30,29 @@ public class EnemyOneController : MonoBehaviour
     {
         pos += transform.up * Time.deltaTime * -m_fSpeed; // Make the enemy move down the screen.
         transform.position = pos + transform.right * Mathf.Sin(Time.time * m_fWaveFrequency) * m_fMagnitude; // Move it in a sine wave.
+        CleanUp();
+    }
+
+    void CleanUp()
+    {
+        if(transform.position.y == -10)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
-
-        m_bDead = true; // Set it to true it will play the death animation.
-        m_fSpeed = 0; // Set speed to 0.
-        m_fWaveFrequency = 0; // Set the frequency of the wave to 0.
-        m_fMagnitude = 0; // Set the magnitude to 0.
-        m_anim.SetBool("Death", m_bDead); // Set the animator to play the animation
-        Destroy(gameObject, 1f); // Destroy the enemy after the animations played.
+        if(col.gameObject.tag == "EnemyBulletOne"){ m_bDead = false; } // Enemy shouldn't die if hit by a projectile from another enemy.
+        else if(col.gameObject.tag == "EnemyOne"){ m_bDead = false; } // Enemy also shouldn't die if it is hit by another enemy.
+        else
+        {
+            m_bDead = true; // Set it to true it will play the death animation.
+            m_fSpeed = 0; // Set speed to 0.
+            m_fWaveFrequency = 0; // Set the frequency of the wave to 0.
+            m_fMagnitude = 0; // Set the magnitude to 0.
+            m_anim.SetBool("Death", m_bDead); // Set the animator to play the animation
+            Destroy(gameObject, 1f); // Destroy the enemy after the animations played.   
+        }
     }
 }
