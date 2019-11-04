@@ -22,7 +22,7 @@ public class EnemyOneController : MonoBehaviour
         m_anim = GetComponent<Animator>(); // Get the animator component.
         rb = GetComponent<Rigidbody2D>(); // Get the rigidbody component.
         pos = transform.position; // The pos vector is set to the position of the enemy.
-        m_bDead = false; // Set it to false
+        m_bDead = false; // Set it to false.
     }
 
     
@@ -30,15 +30,6 @@ public class EnemyOneController : MonoBehaviour
     {
         pos += transform.up * Time.deltaTime * -m_fSpeed; // Make the enemy move down the screen.
         transform.position = pos + transform.right * Mathf.Sin(Time.time * m_fWaveFrequency) * m_fMagnitude; // Move it in a sine wave.
-        CleanUp();
-    }
-
-    void CleanUp()
-    {
-        if(transform.position.y == -10)
-        {
-            Destroy(gameObject);
-        }
     }
 
     void OnCollisionEnter2D(Collision2D col)

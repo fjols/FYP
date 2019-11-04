@@ -60,6 +60,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_One\EnemyOneController.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_One\EnemyOneShoot.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_Spawning\SpawnEnemy.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Game Management\Manager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Players\Controller.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Players\Shooting\Bullet.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Players\Shooting\PlayerBullet.cs" />

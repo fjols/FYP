@@ -45,11 +45,17 @@ public class Controller : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-
-        m_bDead = true; // Set it to true it will play the death animation.
-        m_fSpeed = 0; // Set speed to 0.
-        m_anim.SetBool("Death", m_bDead); // Set the animator to play the animation
-        Destroy(gameObject, 1f); // Destroy the enemy after the animations played.
-        shake.CameraShake(shakeStrength, 0.5f); // Shake the camera.
+        if(col.gameObject.tag == "Player")
+        {
+            m_bDead = false;
+        }
+        else
+        {
+            m_bDead = true; // Set it to true it will play the death animation.
+            m_fSpeed = 0; // Set speed to 0.
+            m_anim.SetBool("Death", m_bDead); // Set the animator to play the animation
+            Destroy(gameObject, 1f); // Destroy the enemy after the animations played.
+            shake.CameraShake(shakeStrength, 0.5f); // Shake the camera.   
+        }
     }
 }

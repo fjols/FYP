@@ -6,7 +6,7 @@ public class SpawnEnemy : MonoBehaviour
 {
     [SerializeField] private int m_iEnemyAmount = 10; // Amount of enemies allowed to be alive at one time.
     private int m_iCurrentEnemyCount= 0;
-    [SerializeField] private GameObject m_enemy; // Enemy to spawn.
+    public GameObject m_enemy; // Enemy to spawn.
     private Vector3 m_enemyPosition; // Position of the enemy.
     void Start()
     {
