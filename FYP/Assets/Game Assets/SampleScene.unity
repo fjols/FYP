@@ -943,6 +943,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerTwo
       objectReference: {fileID: 0}
+    - target: {fileID: 597263117232172549, guid: ac1210503e6d8bc4a9b5fc25daaa3147,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 498433913569128295, guid: ac1210503e6d8bc4a9b5fc25daaa3147,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1047,6 +1052,11 @@ PrefabInstance:
     - target: {fileID: 9113542068558259718, guid: ac1210503e6d8bc4a9b5fc25daaa3147,
         type: 3}
       propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113542068558259718, guid: ac1210503e6d8bc4a9b5fc25daaa3147,
+        type: 3}
+      propertyPath: m_UseFullKinematicContacts
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2657656069800116378, guid: ac1210503e6d8bc4a9b5fc25daaa3147,
