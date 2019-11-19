@@ -141,6 +141,18 @@ MonoBehaviour:
   m_sAButton: A_Button
   m_bullet: {fileID: 936878558038251972, guid: 2e61b4b4a0f34f6499a8f13e3a009e84, type: 3}
   firePoint: {fileID: 904561177}
+--- !u!114 &271200818 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2657656069800116378, guid: ac1210503e6d8bc4a9b5fc25daaa3147,
+    type: 3}
+  m_PrefabInstance: {fileID: 437765028}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271200816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1116bba270f7c045875cf7dafc6444e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &271200821 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 498433913569128295, guid: ac1210503e6d8bc4a9b5fc25daaa3147,
@@ -370,6 +382,11 @@ PrefabInstance:
       propertyPath: camContainer
       value: 
       objectReference: {fileID: 1610115575}
+    - target: {fileID: 2657656069800116378, guid: ac1210503e6d8bc4a9b5fc25daaa3147,
+        type: 3}
+      propertyPath: m_sResetButton
+      value: reset
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac1210503e6d8bc4a9b5fc25daaa3147, type: 3}
 --- !u!1 &519420028
@@ -484,7 +501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d305e5b952347a4cbf3b39e1bb671dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_iEnemyAmount: 10
+  m_iEnemyAmount: 3
   m_enemy: {fileID: 7086602187152412593, guid: 3a1f2d148559a114fb23aca7c2ced9fe, type: 3}
 --- !u!4 &805588997
 Transform:
@@ -812,6 +829,18 @@ MonoBehaviour:
   m_sAButton: A_Button2
   m_bullet: {fileID: 936878558038251972, guid: 2e61b4b4a0f34f6499a8f13e3a009e84, type: 3}
   firePoint: {fileID: 942953551}
+--- !u!114 &597263117232172551 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2657656069800116378, guid: ac1210503e6d8bc4a9b5fc25daaa3147,
+    type: 3}
+  m_PrefabInstance: {fileID: 7274683182151192071}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597263117232172549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1116bba270f7c045875cf7dafc6444e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &597263117232172554
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -929,6 +958,16 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 2028050844}
+    - target: {fileID: 2592585074884893266, guid: 735c4f75f17d0504186f931842a70c33,
+        type: 3}
+      propertyPath: playerOne
+      value: 
+      objectReference: {fileID: 271200818}
+    - target: {fileID: 2592585074884893266, guid: 735c4f75f17d0504186f931842a70c33,
+        type: 3}
+      propertyPath: playerTwo
+      value: 
+      objectReference: {fileID: 597263117232172551}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 735c4f75f17d0504186f931842a70c33, type: 3}
 --- !u!1001 &7274683182151192071
@@ -1104,5 +1143,10 @@ PrefabInstance:
       propertyPath: camContainer
       value: 
       objectReference: {fileID: 1610115575}
+    - target: {fileID: 2657656069800116378, guid: ac1210503e6d8bc4a9b5fc25daaa3147,
+        type: 3}
+      propertyPath: m_sResetButton
+      value: reset2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac1210503e6d8bc4a9b5fc25daaa3147, type: 3}

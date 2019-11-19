@@ -13,11 +13,12 @@ public class Controller : MonoBehaviour
     private float m_fheadingAngle; // Heading angle, used for rotation.
     public string m_sLeftHorizontalAxis; // Holds a string that is the left joystick horizontal axis.
     public string m_sLeftVerticalAxis; // Holds a string that is the left joystick vertical axis.
+    public string m_sResetButton; // Resets the level.
     public Transform firePoint; // Where the bullet spawns.
 
     private Shake shake; // Shake class object. (Shake.cs).
     public GameObject camContainer; // Gameobject which contains the camera.
-    public float shakeStrength = 0.1f;
+    public float shakeStrength = 0.1f; // Strength of the shake.
     Animator m_anim; // The animator component.
     private bool m_bDead = false; // Is the player dead.
 

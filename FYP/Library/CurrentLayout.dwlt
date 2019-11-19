@@ -73,7 +73,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 472}
   m_MaxSize: {x: 10002, y: 14022}
   vertical: 1
-  controlID: 25
+  controlID: 65
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 711, y: 472}
   m_MaxSize: {x: 18006, y: 14022}
   vertical: 0
-  controlID: 75
+  controlID: 42
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 322}
   m_MaxSize: {x: 4004, y: 8022}
   vertical: 1
-  controlID: 76
+  controlID: 43
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -330,7 +330,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 11648
+  m_LastSelectedObjectID: 11608
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -441,9 +441,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ac270000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8efbffff742d0000
+      m_ExpandedIDs: 72fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -503,9 +503,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.274912, y: 0.34251437, z: 62.63672}
+    m_Target: {x: 3.8686922, y: -0.7123707, z: -0.88163054}
     speed: 2
-    m_Value: {x: 2.274912, y: 0.34251437, z: 62.63672}
+    m_Value: {x: 3.8686922, y: -0.7123707, z: -0.88163054}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -538,9 +538,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 13.210529
+    m_Target: 10.753992
     speed: 2
-    m_Value: 13.210529
+    m_Value: 10.753992
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -655,19 +655,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Game Assets/Scripts/Players
+    - Assets/Game Assets/Scripts/Game Management
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Game Assets/Scripts/Players
+  - Assets/Game Assets/Scripts/Game Management
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\FYP\FYP
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d62c0000
-    m_LastClickedID: 11478
+    m_SelectedIDs: a22b0000
+    m_LastClickedID: 11170
     m_ExpandedIDs: 0000000090290000382b0000ec2b0000d62c0000062d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -696,7 +696,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000090290000382b0000ec2b0000
+    m_ExpandedIDs: 0000000090290000382b0000ec2b0000d62c0000062d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -723,7 +723,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 60220000b422000010220000d2210000d4210000d2220000ee9dffff000000004e2c00006230000012290000e0290000365c0000a0310000ee320000b83100009831000092290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
