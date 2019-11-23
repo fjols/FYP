@@ -10,11 +10,14 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerBullet : Bullet
 {
+
+    Manager _gm;
     public float m_fWaveFrequency; // Frequency of the sine wave (How fast it moves).
     public float m_fMagnitude; // Magnitude. 
     
     protected override void Start()
     {
+        _gm = GetComponent<Manager>();
         Invoke("DestroyProjectile", m_fLifetime); // Invoke the virtual method DestroyProjectile from the Bullet base class.
     }
 

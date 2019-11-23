@@ -13,7 +13,6 @@ public class EnemyOneController : MonoBehaviour
     private bool m_bDead; // If this is true the explosion animation in the animator will be played.
     private Rigidbody2D rb; // Rigidbody component.
     Vector3 pos; // Position.
-
     public float m_fWaveFrequency = 2.5f; // How fast the sine wave moves.
     public float m_fMagnitude = 0.5f; // The magnitude.
 
@@ -39,6 +38,7 @@ public class EnemyOneController : MonoBehaviour
         else
         {
             m_bDead = true; // Set it to true it will play the death animation.
+            Manager.m_fScore++;
             m_fSpeed = 0; // Set speed to 0.
             m_fWaveFrequency = 0; // Set the frequency of the wave to 0.
             m_fMagnitude = 0; // Set the magnitude to 0.
