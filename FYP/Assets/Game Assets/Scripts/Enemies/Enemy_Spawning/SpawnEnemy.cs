@@ -11,7 +11,7 @@ using UnityEngine;
 public class SpawnEnemy : MonoBehaviour
 {
     [SerializeField] private int m_iEnemyAmount = 10; // Amount of enemies allowed to be alive at one time.
-    private int m_iCurrentEnemyCount= 0; // Amount of enemies on the screen.
+    public static int m_iCurrentEnemyCount= 0; // Amount of enemies on the screen.
     public GameObject m_enemy; // Enemy to spawn.
     private List<GameObject> m_enemyArray; // A list of enemy gameobjects.
     private Vector2 m_enemyPosition; // Position of the enemy.

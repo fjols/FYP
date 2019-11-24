@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 /*
     This class is for the first enemy type.
@@ -9,6 +11,7 @@ using UnityEngine;
 public class EnemyOneController : MonoBehaviour
 {
     Animator m_anim; // The animator component.
+    public static int m_enemiesLeft = SpawnEnemy.m_iCurrentEnemyCount;
     public float m_fSpeed; // Speed of the enemy.
     private bool m_bDead; // If this is true the explosion animation in the animator will be played.
     private Rigidbody2D rb; // Rigidbody component.
@@ -22,6 +25,7 @@ public class EnemyOneController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>(); // Get the rigidbody component.
         pos = transform.position; // The pos vector is set to the position of the enemy.
         m_bDead = false; // Set it to false.
+        m_enemiesLeft = SpawnEnemy.m_iCurrentEnemyCount;
     }
 
     
@@ -29,6 +33,12 @@ public class EnemyOneController : MonoBehaviour
     {
         pos += transform.up * Time.deltaTime * -m_fSpeed; // Make the enemy move down the screen.
         transform.position = pos + transform.right * Mathf.Sin(Time.time * m_fWaveFrequency) * m_fMagnitude; // Move it in a sine wave.
+
+        if(m_enemiesLeft <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reset the scene.
+            SpawnEnemy.m_iCurrentEnemyCount = 0;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -38,7 +48,8 @@ public class EnemyOneController : MonoBehaviour
         else
         {
             m_bDead = true; // Set it to true it will play the death animation.
-            Manager.m_fScore++;
+            Manager.m_iScore++;
+            m_enemiesLeft--;
             m_fSpeed = 0; // Set speed to 0.
             m_fWaveFrequency = 0; // Set the frequency of the wave to 0.
             m_fMagnitude = 0; // Set the magnitude to 0.
