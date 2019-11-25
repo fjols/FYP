@@ -13,18 +13,21 @@ public class SpawnEnemy : MonoBehaviour
     [SerializeField] private int m_iEnemyAmount = 10; // Amount of enemies allowed to be alive at one time.
     public static int m_iCurrentEnemyCount= 0; // Amount of enemies on the screen.
     public GameObject m_enemy; // Enemy to spawn.
+    public GameObject m_enemyTwo;
     private List<GameObject> m_enemyArray; // A list of enemy gameobjects.
     private Vector2 m_enemyPosition; // Position of the enemy.
     void Start()
     {
         m_enemyArray = new List<GameObject>(); // Initialise the list.
+        m_enemyArray.Add(m_enemy);
+        m_enemyArray.Add(m_enemyTwo);
     }
 
     void Update()
     {
         if(m_iCurrentEnemyCount < m_iEnemyAmount)
         {
-            m_enemyArray.Add(Instantiate(m_enemy, RandomizePosition(), m_enemy.transform.rotation)); // Add the spawned enemies to the list so they can be tracked and removed when killed.
+            m_enemyArray.Add(Instantiate(m_enemyArray[Random.Range(0, 2)], RandomizePosition(), m_enemy.transform.rotation)); // Add the spawned enemies to the list so they can be tracked and removed when killed.
             m_iCurrentEnemyCount++; // Add the enemy count.
         }
     }

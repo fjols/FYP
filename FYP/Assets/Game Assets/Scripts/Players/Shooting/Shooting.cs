@@ -8,6 +8,7 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     public string m_sAButton; // The a button.
+    public AudioSource shootSound; // Shooting Sound.
     public GameObject m_bullet; // The bullet gameobject.
     public Transform firePoint; // Where the bullet spawns.
     void Update()
@@ -15,6 +16,7 @@ public class Shooting : MonoBehaviour
         if(Input.GetButtonDown(m_sAButton))
         {
             Shoot(); // Call the shoot method.
+            shootSound.Play();
         }
     }
 
