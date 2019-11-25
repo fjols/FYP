@@ -73,7 +73,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 19
+  controlID: 20
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 494}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 122
+  controlID: 156
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 344}
   m_MaxSize: {x: 4004, y: 8044}
   vertical: 1
-  controlID: 123
+  controlID: 157
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -441,9 +441,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d02b0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: cacbfcffdeccfcff4efbffff60fbffff6afbffff7afbffff8cfbffff8efbffff702d0000802d0000
+      m_SelectedIDs: 3682ffff
+      m_LastClickedID: -32202
+      m_ExpandedIDs: 60fbffff6cfbffff7afbffff8cfbffff8efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -503,9 +503,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.370352, y: 1.7214917, z: -1.9587724}
+    m_Target: {x: 1.113962, y: -2.1181512, z: 1.0419922}
     speed: 2
-    m_Value: {x: -4.370352, y: 1.7214917, z: -1.9587724}
+    m_Value: {x: 1.113962, y: -2.1181512, z: 1.0419922}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -538,9 +538,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.9946003
+    m_Target: 5.744776
     speed: 2
-    m_Value: 5.9946003
+    m_Value: 5.744776
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -558,7 +558,7 @@ MonoBehaviour:
     m_DynamicClip: 1
     m_OcclusionCulling: 0
   m_ShowGlobalGrid: 1
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: -0.12471226, y: 0.8043645, z: -0.1818233, w: -0.5517125}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -666,9 +666,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f6290000
-    m_LastClickedID: 10742
-    m_ExpandedIDs: 0000000094290000ce2a00003e2b00004c2b0000f42b0000e62c0000182d00005c43000000ca9a3b
+    m_SelectedIDs: 022a0000
+    m_LastClickedID: 10754
+    m_ExpandedIDs: 000000009e290000de2a0000542b00000e2c0000082d00003a2d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -696,7 +696,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000942900003e2b0000f42b0000e62c0000182d0000
+    m_ExpandedIDs: 000000009e290000de2a0000542b00000e2c0000082d00003a2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -727,18 +727,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 60220000b422000010220000d2210000d4210000d2220000ee9dffff000000004e2c00006230000012290000e0290000365c0000a0310000ee320000b83100009831000092290000502c00000a2b0000122c0000c2290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Enemy_Two
-      m_OriginalName: Enemy_Two
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 26514
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 2}
     m_CreateAssetUtility:
@@ -849,10 +849,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: fa02846643225b940ae5ac7476bb084a,
+  m_AnimatorController: {fileID: 9100000, guid: b2c155645d701ac47a9cc44571d63f44,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -1030018604552187116, guid: fa02846643225b940ae5ac7476bb084a,
+  - m_Target: {fileID: 1539676841904581604, guid: b2c155645d701ac47a9cc44571d63f44,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}

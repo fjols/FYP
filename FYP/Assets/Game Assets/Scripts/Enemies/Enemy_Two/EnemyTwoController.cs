@@ -48,21 +48,21 @@ public class EnemyTwoController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.tag == "EnemyBulletOne"){ m_bDead = false; } // Enemy shouldn't die if hit by a projectile from another enemy.
-        else if(col.gameObject.tag == "EnemyOne"){ m_bDead = false; } // Enemy also shouldn't die if it is hit by another enemy.
-        else if(col.gameObject.tag == "EnemyBulletTwo" ||
-                col.gameObject.tag == "EnemyTwo") { m_bDead = false; } // Do not destroy if its related to enemy.
+        if(col.gameObject.CompareTag("EnemyBulletOne")){ m_bDead = false; } // Enemy shouldn't die if hit by a projectile from another enemy.
+        else if(col.gameObject.CompareTag("EnemyOne")){ m_bDead = false; } // Enemy also shouldn't die if it is hit by another enemy.
+        else if(col.gameObject.CompareTag("EnemyTwoBullet") ||
+                col.gameObject.CompareTag("EnemyTwo")) { m_bDead = false; } // Do not destroy if its related to enemy.
         else
         {
             m_bDead = true; // Set it to true it will play the death animation.
             Manager.m_iScore++; // Add to the score.
-            m_enemiesLeft--; // Decrement the enemies left in the game counter.
             m_fSpeed = 0; // Set speed to 0.
             //m_fWaveFrequency = 0; // Set the frequency of the wave to 0.
             //m_fMagnitude = 0; // Set the magnitude to 0.
             m_anim.SetBool("Death", m_bDead); // Set the animator to play the animation
             Destroy(col.gameObject); // Destroy the bullet.
             Destroy(gameObject, 1f); // Destroy the enemy after the animations played.   
+            m_enemiesLeft--; // Decrement the enemies left in the game counter.
         }
     }
 

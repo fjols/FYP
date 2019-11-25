@@ -8,6 +8,8 @@ TagManager:
   - EnemyBulletOne
   - PlayerTwo
   - EnemyOne
+  - EnemyTwo
+  - EnemyTwoBullet
   layers:
   - Default
   - TransparentFX

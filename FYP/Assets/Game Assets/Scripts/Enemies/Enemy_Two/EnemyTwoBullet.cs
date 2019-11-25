@@ -8,6 +8,8 @@ public class EnemyTwoBullet : Bullet
 
     public float m_fWaveFrequency; // Frequency of the sine wave (How fast it moves).
     public float m_fMagnitude; // Magnitude. 
+    private float m_fAngle = 0f;
+    public float m_offset = 45f;
     protected override void Start()
     {
         m_pos = transform.position;
