@@ -21,7 +21,6 @@ public class EnemyTwoBullet : Bullet
     {
         m_pos += transform.up * Time.deltaTime * -m_fSpeed;
         transform.position = m_pos;
-        transform.localScale = new Vector3(4f, 4f, 4f) * Mathf.Sin(m_fWaveFrequency * Time.time) * m_fMagnitude;
     }
 
     void OnCollision2D(Collision2D col)

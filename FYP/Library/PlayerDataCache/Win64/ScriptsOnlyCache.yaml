@@ -1,12 +1,16 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - Controller
     - EnemyOneBullet
     - EnemyOneController
     - EnemyOneShoot
+    - EnemyTwoBullet
+    - EnemyTwoController
+    - EnemyTwoShoot
     - Manager
     - PlayerBullet
+    - PlayerOneController
+    - PlayerTwoController
     - Shake
     - Shooting
     - SpawnEnemy
@@ -18,15 +22,12 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateMachineInspector
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
-    UnityEditor.TestRunner.dll:
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Text
@@ -54,6 +55,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -67,33 +72,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9348}
     - Class: 114
+      Script: {instanceID: 9354}
+    - Class: 114
       Script: {instanceID: 9360}
+    - Class: 114
+      Script: {instanceID: 9404}
     - Class: 114
       Script: {instanceID: 9406}
     - Class: 114
       Script: {instanceID: 9580}
     - Class: 114
-      Script: {instanceID: 9688}
+      Script: {instanceID: 9610}
     - Class: 114
-      Script: {instanceID: 9760}
+      Script: {instanceID: 9690}
     - Class: 114
-      Script: {instanceID: 9838}
+      Script: {instanceID: 9762}
     - Class: 114
-      Script: {instanceID: 10088}
+      Script: {instanceID: 9798}
     - Class: 114
-      Script: {instanceID: 10098}
+      Script: {instanceID: 9842}
     - Class: 114
-      Script: {instanceID: 10126}
+      Script: {instanceID: 9972}
     - Class: 114
-      Script: {instanceID: 10156}
+      Script: {instanceID: 10094}
     - Class: 114
-      Script: {instanceID: 10204}
+      Script: {instanceID: 10104}
     - Class: 114
-      Script: {instanceID: 10476}
+      Script: {instanceID: 10132}
     - Class: 114
-      Script: {instanceID: 10594}
+      Script: {instanceID: 10210}
     - Class: 114
-      Script: {instanceID: 10614}
+      Script: {instanceID: 10482}
+    - Class: 114
+      Script: {instanceID: 10588}
+    - Class: 114
+      Script: {instanceID: 10602}
+    - Class: 114
+      Script: {instanceID: 10622}
+    - Class: 114
+      Script: {instanceID: 10630}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -551,10 +568,16 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 4b0361eaf9dca8b286c375e95e5a081d
+      Hash: fc174cfb7d43c734f6d4b1f36d1e89d0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Shooting
+  - hash:
+      serializedVersion: 2
+      Hash: b5d5ff105e7af2a3bc948662d283235f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyTwoShoot
   - hash:
       serializedVersion: 2
       Hash: f08a111e17bb701f9c9ec57bb78d9920
@@ -611,7 +634,13 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: 9e155c1524f0bd54ec2714cd68b84643
+      Hash: 771f519d2ef1a6f46b0426c18653c0f5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerTwoController
+  - hash:
+      serializedVersion: 2
+      Hash: 61edc2363594fafe2a860b9951445f4b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Manager
@@ -645,6 +674,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 771f519d2ef1a6f46b0426c18653c0f5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerOneController
   - hash:
       serializedVersion: 2
       Hash: 3f8d7b92a6be3c715e55d5cfa7cc8384
@@ -713,7 +748,7 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: 7ee9461c162f0e52ad16c06c69219a2b
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Controller
@@ -725,7 +760,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 8dcc89a94f77d85f63d92f11e74a249b
+      Hash: 32fe618e4ac5b2d4f1bdbc21d31b3ab2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SpawnEnemy
@@ -785,7 +820,13 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: c3a6def231f47c60d6a28d150f93d7b5
+      Hash: a607c76111a60f0085b69afb28914da7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyTwoController
+  - hash:
+      serializedVersion: 2
+      Hash: 5696f4238438d5af74f915cbbdec9cca
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyOneController
@@ -803,6 +844,12 @@ ScriptsOnlyBuild:
     className: EnemyOneBullet
   - hash:
       serializedVersion: 2
+      Hash: e6c16a5ff1f3d7b7d2c59bc734701a64
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyTwoBullet
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -810,4 +857,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Game Assets/SampleScene.unity
-  playerPath: C:/Users/Charlie.CHARLIE-SAN/Desktop/build/FYP.exe
+  playerPath: C:/Users/Charlie.CHARLIE-SAN/Desktop/newbuild/FYP.exe

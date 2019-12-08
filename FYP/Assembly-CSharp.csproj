@@ -64,6 +64,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_Two\EnemyTwoController.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_Two\EnemyTwoShoot.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game Management\Manager.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Menu Scripts\MenuController.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Players\Controller.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Players\PlayerOne\PlayerOneController.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Players\PlayerTwo\PlayerTwoController.cs" />

@@ -52,9 +52,11 @@ public class EnemyTwoController : MonoBehaviour
         else if(col.gameObject.CompareTag("EnemyOne")){ m_bDead = false; } // Enemy also shouldn't die if it is hit by another enemy.
         else if(col.gameObject.CompareTag("EnemyTwoBullet") ||
                 col.gameObject.CompareTag("EnemyTwo")) { m_bDead = false; } // Do not destroy if its related to enemy.
-        else
+        else if(m_bDead == false)
         {
             m_bDead = true; // Set it to true it will play the death animation.
+            Vector3 newPos = new Vector3(transform.position.x, transform.position.y, 2.0f);
+            transform.position = newPos;
             Manager.m_iScore++; // Add to the score.
             m_fSpeed = 0; // Set speed to 0.
             //m_fWaveFrequency = 0; // Set the frequency of the wave to 0.
