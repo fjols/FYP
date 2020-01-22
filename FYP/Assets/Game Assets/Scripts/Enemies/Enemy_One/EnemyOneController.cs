@@ -64,7 +64,7 @@ public class EnemyOneController : MonoBehaviour
         {
             m_bDead = true; // Set it to true it will play the death animation.
             Vector3 newPos = new Vector3(transform.position.x, transform.position.y, 2.0f);
-            transform.position = newPos;
+            transform.position = newPos; // Move the enemy back after its been shot so it wont be affect by more bullets.
             Manager.m_iScore++; // Add to the score.
             m_fSpeed = 0; // Set speed to 0.
             m_fWaveFrequency = 0; // Set the frequency of the wave to 0.
