@@ -73,7 +73,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 42
+  controlID: 93
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -214,8 +214,8 @@ MonoBehaviour:
     y: 0
     width: 1140
     height: 947
-  m_MinSize: {x: 204, y: 344}
-  m_MaxSize: {x: 4004, y: 8044}
+  m_MinSize: {x: 204, y: 322}
+  m_MaxSize: {x: 4004, y: 8022}
   vertical: 1
   controlID: 20
 --- !u!114 &10
@@ -265,8 +265,8 @@ MonoBehaviour:
     y: 535
     width: 1140
     height: 412
-  m_MinSize: {x: 104, y: 122}
-  m_MaxSize: {x: 4004, y: 4022}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -380,7 +380,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -443,7 +443,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8efbffffcc2d0000
+      m_ExpandedIDs: b6f5ffffd8f5ffff02f6fffff4faffff8efbffffd8300000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -503,9 +503,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.29032007, y: -0.09927076, z: 20.669922}
+    m_Target: {x: 1.4818401, y: 1.3435252, z: 19.883144}
     speed: 2
-    m_Value: {x: 0.29032007, y: -0.09927076, z: 20.669922}
+    m_Value: {x: 1.371359, y: 1.2562253, z: 19.935709}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -536,11 +536,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0.000000006657127, y: 0.00000006869945, z: -0.000000016071727, w: -0.99999994}
   m_Size:
-    m_Target: 12.006234
+    m_Target: 12.195467
     speed: 2
-    m_Value: 12.006234
+    m_Value: 11.670303
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -655,20 +655,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Game Assets/Scripts/Fact Generator
+    - Assets/Game Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Game Assets/Scripts/Fact Generator
+  - Assets/Game Assets/Prefabs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\FYP\FYP
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 442e0000
-    m_LastClickedID: 11844
-    m_ExpandedIDs: 00000000a8290000ec2a0000642b00002a2c00002e2d0000602d000000ca9a3b
+    m_SelectedIDs: 0e2a0000
+    m_LastClickedID: 10766
+    m_ExpandedIDs: 00000000aa290000ee2a0000662b00002c2c0000322d0000642d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -696,7 +696,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a8290000ec2a0000642b00002a2c00002e2d0000602d0000
+    m_ExpandedIDs: 00000000aa290000ee2a0000662b00002c2c0000322d0000642d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
