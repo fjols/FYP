@@ -10,6 +10,7 @@ TagManager:
   - EnemyOne
   - EnemyTwo
   - EnemyTwoBullet
+  - Powerup
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Planets
+  - Players
   - 
   - 
   - 

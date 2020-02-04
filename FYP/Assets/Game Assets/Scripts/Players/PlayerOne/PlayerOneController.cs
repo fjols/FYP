@@ -58,6 +58,10 @@ public class PlayerOneController : MonoBehaviour
         {
             m_bDead = false;
         }
+        else if(col.gameObject.tag == "Powerup")
+        {
+            m_bDead = false;
+        }
         else
         {
             m_iHealth--;

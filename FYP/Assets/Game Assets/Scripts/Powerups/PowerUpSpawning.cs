@@ -17,6 +17,11 @@ public class PowerUpSpawning : MonoBehaviour
     
     void Update()
     {
+        SpawnPowerups(); // Spawn the powerups.
+    }
+
+    void SpawnPowerups()
+    {
         if(m_sCurrentPowerups < m_iPowerupAmount) // If the amount of power ups on the screen are not the maximum allowed make more.
         {
             Instantiate(m_powerUp, PowerUpPosition(), m_powerUp.transform.rotation); // Instantiate a gameobject.

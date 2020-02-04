@@ -36,13 +36,15 @@ public class Manager : MonoBehaviour
         if(Input.GetButtonDown(playerOne.m_sResetButton))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reset the scene.
-            SpawnEnemy.m_iCurrentEnemyCount = 0;
+            SpawnEnemy.m_iCurrentEnemyCount = -1;
+            PowerUpSpawning.m_sCurrentPowerups = -1;
             m_iScore = 0;
         }
         else if(Input.GetButtonDown(playerTwo.m_sResetButton))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reset the scene.
             SpawnEnemy.m_iCurrentEnemyCount = 0;
+            PowerUpSpawning.m_sCurrentPowerups = 0;
             m_iScore = 0;
         }
         scoreText.text = "Score: " + m_iScore.ToString(); // Update the text with the score value.

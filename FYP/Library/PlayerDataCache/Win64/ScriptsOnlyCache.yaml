@@ -8,12 +8,16 @@ ScriptsOnlyBuild:
     - EnemyTwoController
     - EnemyTwoShoot
     - Manager
+    - MenuController
     - PlayerBullet
     - PlayerOneController
     - PlayerTwoController
+    - PowerUpSpawning
+    - Rotate
     - Shake
     - Shooting
     - SpawnEnemy
+    - TextGeneration
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -25,6 +29,8 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimatorControllerTool
+    UnityEditor.TestRunner.dll:
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -32,7 +38,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Game Assets/SampleScene.unity:
+    Assets/Game Assets/Scenes/Game.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -41,11 +47,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
-    - Class: 48
+    - Class: 33
       Script: {instanceID: 0}
-    - Class: 49
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
@@ -65,55 +75,53 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
-    - Class: 109
+    - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9326}
+      Script: {instanceID: 9328}
     - Class: 114
-      Script: {instanceID: 9348}
+      Script: {instanceID: 9350}
     - Class: 114
-      Script: {instanceID: 9354}
+      Script: {instanceID: 9356}
     - Class: 114
-      Script: {instanceID: 9360}
-    - Class: 114
-      Script: {instanceID: 9404}
+      Script: {instanceID: 9362}
     - Class: 114
       Script: {instanceID: 9406}
     - Class: 114
-      Script: {instanceID: 9580}
+      Script: {instanceID: 9408}
     - Class: 114
-      Script: {instanceID: 9610}
+      Script: {instanceID: 9552}
     - Class: 114
-      Script: {instanceID: 9690}
+      Script: {instanceID: 9584}
     - Class: 114
-      Script: {instanceID: 9762}
+      Script: {instanceID: 9614}
     - Class: 114
-      Script: {instanceID: 9798}
+      Script: {instanceID: 9696}
     - Class: 114
-      Script: {instanceID: 9842}
+      Script: {instanceID: 9804}
     - Class: 114
-      Script: {instanceID: 9972}
+      Script: {instanceID: 9848}
     - Class: 114
-      Script: {instanceID: 10094}
+      Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10104}
+      Script: {instanceID: 10140}
     - Class: 114
-      Script: {instanceID: 10132}
+      Script: {instanceID: 10218}
     - Class: 114
-      Script: {instanceID: 10210}
+      Script: {instanceID: 10596}
     - Class: 114
-      Script: {instanceID: 10482}
+      Script: {instanceID: 10610}
     - Class: 114
-      Script: {instanceID: 10588}
+      Script: {instanceID: 10620}
     - Class: 114
-      Script: {instanceID: 10602}
+      Script: {instanceID: 10632}
     - Class: 114
-      Script: {instanceID: 10622}
-    - Class: 114
-      Script: {instanceID: 10630}
+      Script: {instanceID: 10640}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -127,7 +135,80 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    Assets/Game Assets/Scenes/Menu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 109
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9220}
+    - Class: 114
+      Script: {instanceID: 9350}
+    - Class: 114
+      Script: {instanceID: 9356}
+    - Class: 114
+      Script: {instanceID: 9362}
+    - Class: 114
+      Script: {instanceID: 9406}
+    - Class: 114
+      Script: {instanceID: 9408}
+    - Class: 114
+      Script: {instanceID: 9552}
+    - Class: 114
+      Script: {instanceID: 9768}
+    - Class: 114
+      Script: {instanceID: 9884}
+    - Class: 114
+      Script: {instanceID: 10102}
+    - Class: 114
+      Script: {instanceID: 10112}
+    - Class: 114
+      Script: {instanceID: 10490}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: caa031bac3a18227166194200ad8319a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TextGeneration
   - hash:
       serializedVersion: 2
       Hash: 984dcc0ba3707b7691fbdca8ff508d28
@@ -562,6 +643,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 72cc96b083f6f4a9adaf7244561a729d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Rotate
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -596,6 +683,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 73c9c8f5b968988a7cf9880ccedcea03
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FasterBullet
   - hash:
       serializedVersion: 2
       Hash: 9a859501a51da4bdc68886b75c04dd1b
@@ -656,6 +749,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 6937f08b0c5f546726b37b98c9e7f487
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuController
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -838,6 +937,12 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
+      Hash: 3403c01cf046d773c6f8333a85b40236
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PowerUpSpawning
+  - hash:
+      serializedVersion: 2
       Hash: 2574d650439c613e4ddf93fd7d7e7ac7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -856,5 +961,6 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 19
   scenePathNames:
-  - Assets/Game Assets/SampleScene.unity
+  - Assets/Game Assets/Scenes/Menu.unity
+  - Assets/Game Assets/Scenes/Game.unity
   playerPath: C:/Users/Charlie.CHARLIE-SAN/Desktop/newbuild/FYP.exe

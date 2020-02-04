@@ -315,7 +315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 656498929}
   - component: {fileID: 656498930}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -673,6 +673,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerTwo
       objectReference: {fileID: 0}
+    - target: {fileID: 1214342105916674539, guid: c68363cf1ab04784aa9ef5dc1be4040a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8964151028497803346, guid: c68363cf1ab04784aa9ef5dc1be4040a,
         type: 3}
       propertyPath: m_Color.r
@@ -691,12 +696,12 @@ PrefabInstance:
     - target: {fileID: 2195813861853876361, guid: c68363cf1ab04784aa9ef5dc1be4040a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.898829
+      value: -4.89
       objectReference: {fileID: 0}
     - target: {fileID: 2195813861853876361, guid: c68363cf1ab04784aa9ef5dc1be4040a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3902467
+      value: -0.98
       objectReference: {fileID: 0}
     - target: {fileID: 2195813861853876361, guid: c68363cf1ab04784aa9ef5dc1be4040a,
         type: 3}
@@ -768,6 +773,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -28.8
       objectReference: {fileID: 0}
+    - target: {fileID: 8964151027525578389, guid: c68363cf1ab04784aa9ef5dc1be4040a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964151028177135015, guid: c68363cf1ab04784aa9ef5dc1be4040a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964151028497803344, guid: c68363cf1ab04784aa9ef5dc1be4040a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c68363cf1ab04784aa9ef5dc1be4040a, type: 3}
 --- !u!114 &1964840185 stripped
@@ -792,7 +812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2002302119}
   - component: {fileID: 2002302120}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1122,6 +1142,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EARTH
       objectReference: {fileID: 0}
+    - target: {fileID: 92258483322975701, guid: 7ec6b8ffc5a7f3349967b0a6d011e4e2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 92258483322975707, guid: 7ec6b8ffc5a7f3349967b0a6d011e4e2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1177,6 +1202,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 92258483450089175, guid: 7ec6b8ffc5a7f3349967b0a6d011e4e2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ec6b8ffc5a7f3349967b0a6d011e4e2, type: 3}
 --- !u!1001 &231719891508805093
@@ -1190,6 +1220,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerOne
+      objectReference: {fileID: 0}
+    - target: {fileID: 828340893445591108, guid: 137342bb422ca0e47ae18dd613107f4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 231719891457349109, guid: 137342bb422ca0e47ae18dd613107f4f,
         type: 3}
@@ -1321,6 +1356,21 @@ PrefabInstance:
       propertyPath: shootSound
       value: 
       objectReference: {fileID: 2002302120}
+    - target: {fileID: 231719890643107837, guid: 137342bb422ca0e47ae18dd613107f4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 231719891077058163, guid: 137342bb422ca0e47ae18dd613107f4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 231719891457349099, guid: 137342bb422ca0e47ae18dd613107f4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 137342bb422ca0e47ae18dd613107f4f, type: 3}
 --- !u!114 &597263117667741090 stripped
@@ -1446,6 +1496,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VENUS
       objectReference: {fileID: 0}
+    - target: {fileID: 3506141299598913502, guid: b5d16166ec73cda4e9830b21d8c2ec7f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3506141299598913496, guid: b5d16166ec73cda4e9830b21d8c2ec7f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1500,6 +1555,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506141299856232936, guid: b5d16166ec73cda4e9830b21d8c2ec7f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5d16166ec73cda4e9830b21d8c2ec7f, type: 3}
