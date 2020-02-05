@@ -23,6 +23,8 @@ public class PlayerOneController : MonoBehaviour
 
     public Text healthText; // Player health text.
 
+    public Powerup _healthPowerUp;
+
     void Awake()
     {
         shake = camContainer.GetComponent<Shake>();
@@ -61,6 +63,9 @@ public class PlayerOneController : MonoBehaviour
         else if(col.gameObject.tag == "Powerup")
         {
             m_bDead = false;
+            m_iHealth = _healthPowerUp.healthIncrease;
+            healthText.text = "Health: " + m_iHealth.ToString();
+            Debug.Log(m_iHealth);
         }
         else
         {

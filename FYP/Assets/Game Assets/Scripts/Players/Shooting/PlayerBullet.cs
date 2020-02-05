@@ -21,10 +21,14 @@ public class PlayerBullet : Bullet
         Invoke("DestroyProjectile", m_fLifetime); // Invoke the virtual method DestroyProjectile from the Bullet base class.
     }
 
-    
     void Update()
     {
         transform.Translate(transform.up * m_fSpeed * Time.deltaTime); // Move the bullet up the screen.
         transform.localScale = new Vector3(4f, 4f, 4f) * Mathf.Sin(m_fWaveFrequency * Time.time) * m_fMagnitude; // Scale the bullet in a sine wave.
+    }
+
+    public void SpeedIncrease(float _speedIncrease)
+    {
+        m_fSpeed = _speedIncrease;
     }
 }

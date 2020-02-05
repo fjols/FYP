@@ -1346,6 +1346,12 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 91432976}
+    - target: {fileID: 1780771434482429573, guid: 137342bb422ca0e47ae18dd613107f4f,
+        type: 3}
+      propertyPath: _healthPowerUp
+      value: 
+      objectReference: {fileID: 11400000, guid: 36e58d54da5acb844ba0dc484b300336,
+        type: 2}
     - target: {fileID: 231719891457349098, guid: 137342bb422ca0e47ae18dd613107f4f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
