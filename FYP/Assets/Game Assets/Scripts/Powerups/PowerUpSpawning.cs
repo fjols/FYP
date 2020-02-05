@@ -6,7 +6,7 @@ public class PowerUpSpawning : MonoBehaviour
 {
     public int m_iPowerupAmount; // Amount of powerups allowed at one time.
     public static int m_sCurrentPowerups = 0; // Current amount of powerups on the screen.
-    public GameObject m_powerUp; // What to spawn.
+    public GameObject[] m_powerUp; // What to spawn.
     private Vector2 m_pos; // Position of the powerup. 
 
     void Start()
@@ -24,7 +24,7 @@ public class PowerUpSpawning : MonoBehaviour
     {
         if(m_sCurrentPowerups < m_iPowerupAmount) // If the amount of power ups on the screen are not the maximum allowed make more.
         {
-            Instantiate(m_powerUp, PowerUpPosition(), m_powerUp.transform.rotation); // Instantiate a gameobject.
+            Instantiate(m_powerUp[Random.Range(0, m_powerUp.Length)], PowerUpPosition(), Quaternion.identity); // Instantiate a gameobject.
             m_sCurrentPowerups++; // Increment the amount.
         }
     }

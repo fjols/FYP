@@ -645,8 +645,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_iPowerupAmount: 3
-  m_powerUp: {fileID: 8916741799493335727, guid: cc13d63693136084cb7de5da08080b9b,
-    type: 3}
+  m_powerUp:
+  - {fileID: 8916741799493335727, guid: cc13d63693136084cb7de5da08080b9b, type: 3}
+  - {fileID: 601666926068376303, guid: f783cd6d3eccc264794b2afd2cd1d50b, type: 3}
 --- !u!4 &1619877748
 Transform:
   m_ObjectHideFlags: 0
