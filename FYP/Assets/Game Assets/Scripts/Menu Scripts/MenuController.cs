@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     public string button;
+    public string scene;
     void Start()
     {
         
@@ -15,7 +16,7 @@ public class MenuController : MonoBehaviour
     {
         if(Input.GetButtonDown(button))
         {
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene(scene);
         }
     }
 }

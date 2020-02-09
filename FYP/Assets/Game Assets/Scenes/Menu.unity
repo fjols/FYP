@@ -429,6 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: A_Button
+  scene: Instructions
 --- !u!114 &259837901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -864,6 +865,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 9.502228
       objectReference: {fileID: 0}
+    - target: {fileID: 3506141299598913503, guid: b5d16166ec73cda4e9830b21d8c2ec7f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3506141299856232937, guid: b5d16166ec73cda4e9830b21d8c2ec7f,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -873,11 +879,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.559
-      objectReference: {fileID: 0}
-    - target: {fileID: 3506141299598913503, guid: b5d16166ec73cda4e9830b21d8c2ec7f,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3506141299856232938, guid: b5d16166ec73cda4e9830b21d8c2ec7f,
         type: 3}

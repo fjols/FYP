@@ -67,6 +67,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Fact Generator\TextGeneration.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game Management\Manager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Menu Scripts\MenuController.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Menu Scripts\TypingText.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Planet\Rotate.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Players\Controller.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Players\PlayerOne\PlayerOneController.cs" />
