@@ -23,7 +23,7 @@ public class EnemyOneController : MonoBehaviour
     void Start()
     {
         m_anim = GetComponent<Animator>(); // Get the animator component.
-        rb = GetComponent<Rigidbody2D>(); // Get the rigidbody component.
+        rb = GetComponent<Rigidbody2D>(); // Get the rigidbody component.*
         m_enemyHandler = GetComponent<SpawnEnemy>();
         pos = transform.position; // The pos vector is set to the position of the enemy.
         m_bDead = false; // Set it to false.

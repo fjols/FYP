@@ -461,7 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d305e5b952347a4cbf3b39e1bb671dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_iEnemyAmount: 3
+  m_iEnemyAmount: 5
   m_enemy: {fileID: 7086602187152412593, guid: 3a1f2d148559a114fb23aca7c2ced9fe, type: 3}
   m_enemyTwo: {fileID: 2452071216419778501, guid: 0c997a07a73823e4c89ec80ae0f65b38,
     type: 3}

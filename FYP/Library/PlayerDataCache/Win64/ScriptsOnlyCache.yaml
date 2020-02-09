@@ -7,12 +7,14 @@ ScriptsOnlyBuild:
     - EnemyTwoBullet
     - EnemyTwoController
     - EnemyTwoShoot
+    - FasterBullet
     - Manager
     - MenuController
     - PlayerBullet
     - PlayerOneController
     - PlayerTwoController
     - PowerUpSpawning
+    - Powerup
     - Rotate
     - Shake
     - Shooting
@@ -23,6 +25,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -96,27 +99,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9614}
     - Class: 114
+      Script: {instanceID: 9694}
+    - Class: 114
       Script: {instanceID: 9696}
     - Class: 114
       Script: {instanceID: 9804}
     - Class: 114
-      Script: {instanceID: 9848}
+      Script: {instanceID: 9822}
     - Class: 114
-      Script: {instanceID: 9980}
+      Script: {instanceID: 9850}
     - Class: 114
-      Script: {instanceID: 10140}
+      Script: {instanceID: 9984}
     - Class: 114
-      Script: {instanceID: 10218}
+      Script: {instanceID: 10144}
     - Class: 114
-      Script: {instanceID: 10596}
+      Script: {instanceID: 10222}
     - Class: 114
-      Script: {instanceID: 10610}
+      Script: {instanceID: 10600}
     - Class: 114
-      Script: {instanceID: 10620}
+      Script: {instanceID: 10614}
     - Class: 114
-      Script: {instanceID: 10632}
+      Script: {instanceID: 10624}
     - Class: 114
-      Script: {instanceID: 10640}
+      Script: {instanceID: 10636}
+    - Class: 114
+      Script: {instanceID: 10644}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -128,6 +135,61 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Game Assets/Scenes/Instructions.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9350}
+    - Class: 114
+      Script: {instanceID: 9356}
+    - Class: 114
+      Script: {instanceID: 9362}
+    - Class: 114
+      Script: {instanceID: 9406}
+    - Class: 114
+      Script: {instanceID: 9552}
+    - Class: 114
+      Script: {instanceID: 9886}
+    - Class: 114
+      Script: {instanceID: 10106}
+    - Class: 114
+      Script: {instanceID: 10258}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 157
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -181,13 +243,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9768}
     - Class: 114
-      Script: {instanceID: 9884}
+      Script: {instanceID: 9886}
     - Class: 114
-      Script: {instanceID: 10102}
+      Script: {instanceID: 10106}
     - Class: 114
-      Script: {instanceID: 10112}
+      Script: {instanceID: 10116}
     - Class: 114
-      Script: {instanceID: 10490}
+      Script: {instanceID: 10494}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -685,7 +747,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 73c9c8f5b968988a7cf9880ccedcea03
+      Hash: 9fdabc9e95f9b503dd994af38e758eb5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FasterBullet
@@ -733,6 +795,12 @@ ScriptsOnlyBuild:
     className: PlayerTwoController
   - hash:
       serializedVersion: 2
+      Hash: 6c13f971901a7fa7d4305f2685524236
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Powerup
+  - hash:
+      serializedVersion: 2
       Hash: 61edc2363594fafe2a860b9951445f4b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -751,10 +819,16 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 6937f08b0c5f546726b37b98c9e7f487
+      Hash: f54b64d365600253254d414ead015f7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuController
+  - hash:
+      serializedVersion: 2
+      Hash: e2295efcd99d185bf26a43483f0e5545
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TypingText
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -775,7 +849,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 771f519d2ef1a6f46b0426c18653c0f5
+      Hash: 74228773cbb43dbe7b6415593a96ecf7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerOneController
@@ -937,7 +1011,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 3403c01cf046d773c6f8333a85b40236
+      Hash: 06e3147530f726bb2fd404bd6f216a16
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PowerUpSpawning
@@ -962,5 +1036,6 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Game Assets/Scenes/Menu.unity
+  - Assets/Game Assets/Scenes/Instructions.unity
   - Assets/Game Assets/Scenes/Game.unity
   playerPath: C:/Users/Charlie.CHARLIE-SAN/Desktop/newbuild/FYP.exe

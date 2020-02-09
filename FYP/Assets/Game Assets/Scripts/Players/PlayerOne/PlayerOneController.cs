@@ -65,7 +65,6 @@ public class PlayerOneController : MonoBehaviour
             m_bDead = false;
             m_iHealth = _healthPowerUp.healthIncrease;
             healthText.text = "Health: " + m_iHealth.ToString();
-            Debug.Log(m_iHealth);
         }
         else
         {
