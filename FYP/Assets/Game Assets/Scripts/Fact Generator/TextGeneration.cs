@@ -10,6 +10,7 @@ public class TextGeneration : MonoBehaviour
     
     public string[] m_facts; // Array of facts to use.
     public Text m_factText; // Text which will display the fact.
+    public Text m_backgroundText; // Text behind the text. (Creates a depth).
     public string m_button; // button to generate facts.
     void Update()
     {
