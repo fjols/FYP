@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Game Assets\Prefabs\Networking\PlayerObject.cs" />
      <Compile Include="Assets\Game Assets\Scriptable Objects\Powerup.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Camera\Shake.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_One\EnemyOneBullet.cs" />
@@ -68,6 +69,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Game Management\Manager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Menu Scripts\MenuController.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Menu Scripts\TypingText.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Networking\PlayerUnit.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Planet\Rotate.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Players\Controller.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Players\PlayerOne\PlayerOneController.cs" />
@@ -99,6 +101,9 @@
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Charlie.CHARLIE-SAN/Desktop/Code/FYP/FYP/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="com.unity.multiplayer-hlapi.Editor">
+ <HintPath>C:/Users/Charlie.CHARLIE-SAN/Desktop/Code/FYP/FYP/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Charlie.CHARLIE-SAN/Desktop/Code/FYP/FYP/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -111,11 +116,17 @@
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>C:/Users/Charlie.CHARLIE-SAN/Desktop/Code/FYP/FYP/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="com.unity.multiplayer-weaver.Editor">
+ <HintPath>C:/Users/Charlie.CHARLIE-SAN/Desktop/Code/FYP/FYP/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/Charlie.CHARLIE-SAN/Desktop/Code/FYP/FYP/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
  <HintPath>C:/Users/Charlie.CHARLIE-SAN/Desktop/Code/FYP/FYP/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.multiplayer-hlapi.Runtime">
+ <HintPath>C:/Users/Charlie.CHARLIE-SAN/Desktop/Code/FYP/FYP/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

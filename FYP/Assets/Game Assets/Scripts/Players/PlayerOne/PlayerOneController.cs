@@ -16,7 +16,7 @@ public class PlayerOneController : MonoBehaviour
     public int m_iHealth = 3; // Amount of hits the player can take. One hit = 1 health lost.
 
     public Shake shake; // Shake class object. (Shake.cs).
-    public GameObject camContainer; // Gameobject which contains the camera.
+   // public GameObject camContainer; // Gameobject which contains the camera.
     public float shakeStrength = 0.1f; // Strength of the shake.
     public Animator m_anim; // The animator component.
     public bool m_bDead = false; // Is the player dead.
@@ -27,7 +27,7 @@ public class PlayerOneController : MonoBehaviour
 
     void Awake()
     {
-        shake = camContainer.GetComponent<Shake>();
+       // shake = camContainer.GetComponent<Shake>();
     }
     // Start is called before the first frame update
     void Start()
@@ -76,10 +76,10 @@ public class PlayerOneController : MonoBehaviour
                 m_fSpeed = 0; // Set speed to 0.
                 m_anim.SetBool("Death", m_bDead); // Set the animator to play the animation
                 Destroy(gameObject, 1f); // Destroy the enemy after the animations played.
-                shake.CameraShake(shakeStrength, 0.5f); // Shake the camera.   
+                //shake.CameraShake(shakeStrength, 0.5f); // Shake the camera.   
             }
             m_bDead = false; // Set it to true it will play the death animation.
-            shake.CameraShake(shakeStrength, 0.5f); // Shake the camera.   
+            //shake.CameraShake(shakeStrength, 0.5f); // Shake the camera.   
         }
     }
 }

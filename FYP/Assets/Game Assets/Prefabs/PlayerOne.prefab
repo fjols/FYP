@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 231719891242848210}
   - component: {fileID: 231719891242848212}
   - component: {fileID: 1780771434482429573}
+  - component: {fileID: -1691519574970451712}
   m_Layer: 0
   m_Name: PlayerOne
   m_TagString: Player
@@ -374,6 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_sAButton: A_Button
+  shootSound: {fileID: 0}
   m_bullet: {fileID: 936878558038251972, guid: 2e61b4b4a0f34f6499a8f13e3a009e84, type: 3}
   firePoint: {fileID: 231719890643107836}
 --- !u!114 &1780771434482429573
@@ -388,3 +390,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c2ad98a4fa44a47aaca904ed6b8e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_fSpeed: 4
+  rbody: {fileID: 0}
+  m_moveVel: {x: 0, y: 0}
+  m_fheadingAngle: 0
+  m_sLeftHorizontalAxis: LeftJoystickHorizontal
+  m_sLeftVerticalAxis: LeftJoystickVertical
+  m_sResetButton: reset
+  firePoint: {fileID: 0}
+  m_iHealth: 3
+  shake: {fileID: 0}
+  camContainer: {fileID: 0}
+  shakeStrength: 0.1
+  m_anim: {fileID: 0}
+  m_bDead: 0
+  healthText: {fileID: 0}
+  _healthPowerUp: {fileID: 0}
+--- !u!114 &-1691519574970451712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828340893445591108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8258ea15b8f74c4889ce485d21cbbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
