@@ -6,6 +6,8 @@ using UnityEngine.Networking;
 public class PlayerObject : NetworkBehaviour
 {
     public GameObject PlayerPrefab;
+    [SyncVar(hook = "OnPlayerNameChanged")]
+    public string playerName = "Anonymous";
 
     void Start()
     {
@@ -19,7 +21,15 @@ public class PlayerObject : NetworkBehaviour
 
     void Update()
     {
-        
+        if(isLocalPlayer == false)
+        {
+            return;
+        }
+        if(Input.GetKeyDown(KeyCode.S))
+        {
+            Debug.Log("S KEY DOWN");
+            CmdSpawnUnit();
+        }
     }
 
     // Command functions require Cmd prefix.
@@ -27,6 +37,6 @@ public class PlayerObject : NetworkBehaviour
     void CmdSpawnUnit()
     {
         GameObject go = Instantiate(PlayerPrefab); // Instatiate a player.
-        NetworkServer.Spawn(go); // Spawn it using the network.
+        NetworkServer.SpawnWithClientAuthority(go, connectionToClient);
     }
 }

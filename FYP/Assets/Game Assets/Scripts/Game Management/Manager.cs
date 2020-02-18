@@ -33,10 +33,10 @@ public class Manager : MonoBehaviour
 
     void Update()
     {
-        RestartGame();
+       // RestartGame();
         scoreText.text = "Score: " + m_iScore.ToString(); // Update the text with the score value.
     }
-
+/*
     void RestartGame()
     {
         if(Input.GetButtonDown(playerOne.m_sResetButton))
@@ -53,6 +53,6 @@ public class Manager : MonoBehaviour
             PowerUpSpawning.m_sCurrentPowerups = -3;
             m_iScore = 0;
         }
-    }
+    }*/
 
 }

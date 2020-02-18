@@ -397,7 +397,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PlayerPrefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3645877207143231121, guid: b8fbfc19eea69224c932bad06921d86e,
+        type: 3}
     - target: {fileID: 2672377043005695519, guid: b33f9f74a5a5279468e5042b12059b63,
         type: 3}
       propertyPath: m_SpawnPrefabs.Array.data[0]
@@ -413,6 +414,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Channels.Array.data[0]
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672377043005695519, guid: b33f9f74a5a5279468e5042b12059b63,
+        type: 3}
+      propertyPath: m_AutoCreatePlayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b33f9f74a5a5279468e5042b12059b63, type: 3}
