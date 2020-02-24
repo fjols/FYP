@@ -19,10 +19,10 @@ public class Manager : MonoBehaviour
 
     void Start()
     {
-        scoreText.text = "Score: " + m_iScore;
-        winText.text = "";
-        playerOneHealthText.text = "Health: " + m_iPlayerOneHealth;
-        playerTwoHealthText.text = "Health: " + m_iPlayerTwoHealth;
+       // scoreText.text = "Score: " + m_iScore;
+      //  winText.text = "";
+       // playerOneHealthText.text = "Health: " + m_iPlayerOneHealth;
+       // playerTwoHealthText.text = "Health: " + m_iPlayerTwoHealth;
     }
     public void IncreaseScore()
     {
