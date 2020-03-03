@@ -41,8 +41,11 @@ GameObject:
   - component: {fileID: 8934001477732907832}
   - component: {fileID: 7108534536938859026}
   - component: {fileID: 8432670039048828048}
+  - component: {fileID: -4675837019387037953}
+  - component: {fileID: 5097196186298101788}
+  - component: {fileID: -3516170217869860285}
   m_Layer: 0
-  m_Name: PlayerUnit 1
+  m_Name: PlayerUnit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,6 +116,76 @@ MonoBehaviour:
   shootSound: {fileID: 0}
   m_bullet: {fileID: 936878558038251972, guid: 2e61b4b4a0f34f6499a8f13e3a009e84, type: 3}
   firePoint: {fileID: 0}
+--- !u!114 &-4675837019387037953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5672918728130661613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0c2ad98a4fa44a47aaca904ed6b8e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_fSpeed: 4
+  rbody: {fileID: 0}
+  m_moveVel: {x: 0, y: 0}
+  m_fheadingAngle: 0
+  m_sLeftHorizontalAxis: LeftJoystickHorizontal
+  m_sLeftVerticalAxis: LeftJoystickVertical
+  m_sResetButton: reset
+  firePoint: {fileID: 0}
+  m_iHealth: 3
+  shake: {fileID: 0}
+  shakeStrength: 0.1
+  m_anim: {fileID: 0}
+  m_bDead: 0
+  healthText: {fileID: 0}
+  _healthPowerUp: {fileID: 0}
+--- !u!50 &5097196186298101788
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5672918728130661613}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &-3516170217869860285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5672918728130661613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d6c522af31447398568cc65334232b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 2
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 3
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!1 &8133464715759274562
 GameObject:
   m_ObjectHideFlags: 0

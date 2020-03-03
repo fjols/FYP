@@ -6,7 +6,6 @@ using UnityEngine.Networking;
 public class PlayerObject : NetworkBehaviour
 {
     public GameObject PlayerPrefab;
-    [SyncVar(hook = "OnPlayerNameChanged")]
     public string playerName = "Anonymous";
 
     void Start()

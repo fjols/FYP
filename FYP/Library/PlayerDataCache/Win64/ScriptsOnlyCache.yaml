@@ -11,6 +11,7 @@ ScriptsOnlyBuild:
     - Manager
     - MenuController
     - PlayerBullet
+    - PlayerObject
     - PlayerOneController
     - PowerUpSpawning
     - Rotate
@@ -38,11 +39,14 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Text
+    com.unity.multiplayer-hlapi.Editor.dll:
+    - UnityEditor.NetworkBehaviourInspector
     com.unity.multiplayer-hlapi.Runtime.dll:
     - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
     - UnityEngine.Networking.NetworkManager
     - UnityEngine.Networking.NetworkManagerHUD
+    - UnityEngine.Networking.NetworkTransform
   sceneClasses:
     Assets/Game Assets/Scenes/Game.unity:
     - Class: 1
@@ -82,6 +86,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9352}
     - Class: 114
+      Script: {instanceID: 9374}
+    - Class: 114
       Script: {instanceID: 9400}
     - Class: 114
       Script: {instanceID: 9406}
@@ -92,7 +98,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9458}
     - Class: 114
+      Script: {instanceID: 9496}
+    - Class: 114
       Script: {instanceID: 9612}
+    - Class: 114
+      Script: {instanceID: 9648}
     - Class: 114
       Script: {instanceID: 9682}
     - Class: 114
@@ -100,25 +110,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9784}
     - Class: 114
-      Script: {instanceID: 9990}
+      Script: {instanceID: 9992}
     - Class: 114
-      Script: {instanceID: 10094}
+      Script: {instanceID: 10096}
     - Class: 114
-      Script: {instanceID: 10350}
+      Script: {instanceID: 10158}
     - Class: 114
-      Script: {instanceID: 10432}
+      Script: {instanceID: 10352}
     - Class: 114
-      Script: {instanceID: 10854}
+      Script: {instanceID: 10434}
     - Class: 114
-      Script: {instanceID: 10874}
+      Script: {instanceID: 10856}
     - Class: 114
-      Script: {instanceID: 10894}
+      Script: {instanceID: 10876}
     - Class: 114
-      Script: {instanceID: 10906}
+      Script: {instanceID: 10896}
     - Class: 114
-      Script: {instanceID: 10918}
+      Script: {instanceID: 10908}
     - Class: 114
-      Script: {instanceID: 10930}
+      Script: {instanceID: 10920}
+    - Class: 114
+      Script: {instanceID: 10932}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -173,11 +185,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9612}
     - Class: 114
-      Script: {instanceID: 10038}
+      Script: {instanceID: 10040}
     - Class: 114
-      Script: {instanceID: 10304}
+      Script: {instanceID: 10306}
     - Class: 114
-      Script: {instanceID: 10476}
+      Script: {instanceID: 10478}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -238,13 +250,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9874}
     - Class: 114
-      Script: {instanceID: 10038}
+      Script: {instanceID: 10040}
     - Class: 114
-      Script: {instanceID: 10304}
+      Script: {instanceID: 10306}
     - Class: 114
-      Script: {instanceID: 10318}
+      Script: {instanceID: 10320}
     - Class: 114
-      Script: {instanceID: 10738}
+      Script: {instanceID: 10740}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -830,6 +842,12 @@ ScriptsOnlyBuild:
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkTransformVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: 7033358e85bfe187ff96da8169fe4ba6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerController
   - hash:
       serializedVersion: 2
       Hash: 6c13f971901a7fa7d4305f2685524236

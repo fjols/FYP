@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 public class PlayerOneController : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class PlayerOneController : MonoBehaviour
     public Text healthText; // Player health text.
 
     public Powerup _healthPowerUp;
+
+    [SyncVar] public int playersConnected;
 
     void Awake()
     {
