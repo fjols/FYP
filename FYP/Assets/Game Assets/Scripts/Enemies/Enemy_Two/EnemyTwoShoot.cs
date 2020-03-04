@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class EnemyTwoShoot : MonoBehaviour
 {
-    public GameObject m_bullet;
-    public Transform[] m_firePoint;
-    public float m_fShootingCoolDown;
-    private bool m_bCoroutineRunning = false;
+    public GameObject m_bullet; // Bullet to use.
+    public Transform[] m_firePoint; // Where to fire the bullet from.
+    public float m_fShootingCoolDown; // How long between each bullet being fired.
+    private bool m_bCoroutineRunning = false; // Is the coroutine running.
 
     void Update()
     {
-        StartCoroutine(Attack(m_fShootingCoolDown));
+        StartCoroutine(Attack(m_fShootingCoolDown)); // Run the coroutine.
     }
     
     IEnumerator Attack(float time)

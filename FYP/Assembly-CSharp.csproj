@@ -63,7 +63,9 @@
      <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_One\EnemyOneController.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_One\EnemyOneShoot.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_Spawning\SpawnEnemy.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_Three\EnemyThreeBullet.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_Three\EnemyThreeController.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_Three\EnemyThreeShoot.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_Two\EnemyTwoBullet.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_Two\EnemyTwoController.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_Two\EnemyTwoShoot.cs" />

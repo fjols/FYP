@@ -25,9 +25,10 @@ public class EnemyThreeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_pos += transform.up * Time.deltaTime * -m_fSpeed;
-        transform.position = m_pos + transform.right * Mathf.Cos(Time.time * 0.1f) * 2f * Mathf.Sin(Time.time * 4) * 2 * Mathf.Cos(Time.time);
-        OffscreenDestroy();
+        m_pos += transform.up * Time.deltaTime * -m_fSpeed; // Move the enemy down the screen.
+        transform.position = m_pos + transform.right * Mathf.Cos(Time.time * 0.1f) * 2f * Mathf.Sin(Time.time * 4) * 2 * Mathf.Cos(Time.time); // Move it in a cool wave
+        //transform.Rotate(Vector3.forward * 40f * Time.deltaTime); // Rotate the enemy.
+        OffscreenDestroy(); // Destroy the enemy once it gets off screen.
     }
 
     void OffscreenDestroy()

@@ -14,6 +14,7 @@ public class SpawnEnemy : MonoBehaviour
     public static int m_iCurrentEnemyCount = 0; // Amount of enemies on the screen.
     public GameObject m_enemy; // Enemy to spawn.
     public GameObject m_enemyTwo; // Enemy to spawn.
+    public GameObject m_enemyThree; // Enemy to spawn.
     private List<GameObject> m_enemyArray; // A list of enemy gameobjects.
     private Vector2 m_enemyPosition; // Position of the enemy.
     void Start()
@@ -21,13 +22,14 @@ public class SpawnEnemy : MonoBehaviour
         m_enemyArray = new List<GameObject>(); // Initialise the list.
         m_enemyArray.Add(m_enemy);
         m_enemyArray.Add(m_enemyTwo);
+        m_enemyArray.Add(m_enemyThree);
     }
 
     void Update()
     {
         if(m_iCurrentEnemyCount < m_iEnemyAmount)
         {
-            m_enemyArray.Add(Instantiate(m_enemyArray[Random.Range(0, 2)], RandomizePosition(), m_enemy.transform.rotation)); // Add the spawned enemies to the list so they can be tracked and removed when killed.
+            m_enemyArray.Add(Instantiate(m_enemyArray[Random.Range(0, 3)], RandomizePosition(), m_enemy.transform.rotation)); // Add the spawned enemies to the list so they can be tracked and removed when killed.
             m_iCurrentEnemyCount++; // Add the enemy count.
         }
     }
