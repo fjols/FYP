@@ -4,6 +4,9 @@ ScriptsOnlyBuild:
     - EnemyOneBullet
     - EnemyOneController
     - EnemyOneShoot
+    - EnemyThreeBullet
+    - EnemyThreeController
+    - EnemyThreeShoot
     - EnemyTwoBullet
     - EnemyTwoController
     - EnemyTwoShoot
@@ -11,7 +14,6 @@ ScriptsOnlyBuild:
     - Manager
     - MenuController
     - PlayerBullet
-    - PlayerObject
     - PlayerOneController
     - PowerUpSpawning
     - Rotate
@@ -39,8 +41,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Text
-    com.unity.multiplayer-hlapi.Editor.dll:
-    - UnityEditor.NetworkBehaviourInspector
     com.unity.multiplayer-hlapi.Runtime.dll:
     - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
@@ -69,11 +69,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -84,53 +90,59 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9352}
+      Script: {instanceID: 9252}
     - Class: 114
-      Script: {instanceID: 9374}
+      Script: {instanceID: 9354}
     - Class: 114
-      Script: {instanceID: 9400}
+      Script: {instanceID: 9376}
     - Class: 114
-      Script: {instanceID: 9406}
+      Script: {instanceID: 9402}
     - Class: 114
-      Script: {instanceID: 9412}
+      Script: {instanceID: 9408}
     - Class: 114
-      Script: {instanceID: 9456}
+      Script: {instanceID: 9414}
     - Class: 114
       Script: {instanceID: 9458}
     - Class: 114
-      Script: {instanceID: 9496}
+      Script: {instanceID: 9460}
     - Class: 114
-      Script: {instanceID: 9612}
+      Script: {instanceID: 9498}
     - Class: 114
-      Script: {instanceID: 9648}
+      Script: {instanceID: 9614}
     - Class: 114
-      Script: {instanceID: 9682}
+      Script: {instanceID: 9650}
     - Class: 114
-      Script: {instanceID: 9778}
+      Script: {instanceID: 9684}
     - Class: 114
-      Script: {instanceID: 9784}
+      Script: {instanceID: 9698}
     - Class: 114
-      Script: {instanceID: 9992}
+      Script: {instanceID: 9782}
     - Class: 114
-      Script: {instanceID: 10096}
+      Script: {instanceID: 9788}
     - Class: 114
-      Script: {instanceID: 10158}
+      Script: {instanceID: 9996}
     - Class: 114
-      Script: {instanceID: 10352}
+      Script: {instanceID: 10100}
     - Class: 114
-      Script: {instanceID: 10434}
+      Script: {instanceID: 10112}
     - Class: 114
-      Script: {instanceID: 10856}
+      Script: {instanceID: 10164}
     - Class: 114
-      Script: {instanceID: 10876}
+      Script: {instanceID: 10358}
     - Class: 114
-      Script: {instanceID: 10896}
+      Script: {instanceID: 10440}
     - Class: 114
-      Script: {instanceID: 10908}
+      Script: {instanceID: 10862}
     - Class: 114
-      Script: {instanceID: 10920}
+      Script: {instanceID: 10882}
     - Class: 114
-      Script: {instanceID: 10932}
+      Script: {instanceID: 10902}
+    - Class: 114
+      Script: {instanceID: 10914}
+    - Class: 114
+      Script: {instanceID: 10926}
+    - Class: 114
+      Script: {instanceID: 10938}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -175,21 +187,21 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9400}
+      Script: {instanceID: 9402}
     - Class: 114
-      Script: {instanceID: 9406}
+      Script: {instanceID: 9408}
     - Class: 114
-      Script: {instanceID: 9412}
+      Script: {instanceID: 9414}
     - Class: 114
-      Script: {instanceID: 9456}
+      Script: {instanceID: 9458}
     - Class: 114
-      Script: {instanceID: 9612}
+      Script: {instanceID: 9614}
     - Class: 114
-      Script: {instanceID: 10040}
+      Script: {instanceID: 10044}
     - Class: 114
-      Script: {instanceID: 10306}
+      Script: {instanceID: 10312}
     - Class: 114
-      Script: {instanceID: 10478}
+      Script: {instanceID: 10484}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -236,27 +248,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9230}
     - Class: 114
-      Script: {instanceID: 9400}
+      Script: {instanceID: 9402}
     - Class: 114
-      Script: {instanceID: 9406}
+      Script: {instanceID: 9408}
     - Class: 114
-      Script: {instanceID: 9412}
-    - Class: 114
-      Script: {instanceID: 9456}
+      Script: {instanceID: 9414}
     - Class: 114
       Script: {instanceID: 9458}
     - Class: 114
-      Script: {instanceID: 9612}
+      Script: {instanceID: 9460}
     - Class: 114
-      Script: {instanceID: 9874}
+      Script: {instanceID: 9614}
     - Class: 114
-      Script: {instanceID: 10040}
+      Script: {instanceID: 9878}
     - Class: 114
-      Script: {instanceID: 10306}
+      Script: {instanceID: 10044}
     - Class: 114
-      Script: {instanceID: 10320}
+      Script: {instanceID: 10312}
     - Class: 114
-      Script: {instanceID: 10740}
+      Script: {instanceID: 10326}
+    - Class: 114
+      Script: {instanceID: 10746}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -278,6 +290,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TextGeneration
+  - hash:
+      serializedVersion: 2
+      Hash: 7b71c6e315673fb5e9b74e554926b595
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyThreeShoot
   - hash:
       serializedVersion: 2
       Hash: 984dcc0ba3707b7691fbdca8ff508d28
@@ -766,6 +784,12 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
+      Hash: c2ece532ff440926cf143ff7ee3f54d1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyThreeBullet
+  - hash:
+      serializedVersion: 2
       Hash: 3f0b469d844365c00a63de0437c9b29e
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
@@ -910,13 +934,19 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: a607c76111a60f0085b69afb28914da7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyThreeController
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 3e1c4ed58d1d33c395fbc5f7f5204a7f
+      Hash: e73c55bc1cf4a5e1070add5e1b6e21c3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerOneController
@@ -1018,7 +1048,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 32fe618e4ac5b2d4f1bdbc21d31b3ab2
+      Hash: 281bf5557ad27af3cda62ab60bbd61e3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SpawnEnemy
