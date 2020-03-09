@@ -40,11 +40,6 @@ public class PlayerOneController : NetworkBehaviour
         healthText.text = "Health: " + m_iHealth;
     }
 
-    void FixedUpdate()
-    {
-        rbody.MovePosition(rbody.position + m_moveVel * Time.fixedDeltaTime); // Move the player.
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -53,33 +48,26 @@ public class PlayerOneController : NetworkBehaviour
 
     public void movePlayer()
     {
-        Vector2 moveInput = new Vector2(Input.GetAxisRaw(m_sLeftHorizontalAxis), Input.GetAxisRaw(m_sLeftVerticalAxis)); // Get the axises the player is using.
-        m_moveVel = moveInput.normalized * m_fSpeed; // Move velocity.
-        if(hasAuthority == false)
+        if(isLocalPlayer)
         {
-            bestGuessPosition = bestGuessPosition + (m_moveVel * Time.deltaTime);
-            transform.position = Vector3.Lerp(transform.position, bestGuessPosition, Time.deltaTime * 10);
-            return;
+            Vector2 moveInput = new Vector2(Input.GetAxisRaw(m_sLeftHorizontalAxis), Input.GetAxisRaw(m_sLeftVerticalAxis)); // Get the axises the player is using.
+            m_moveVel = moveInput.normalized * m_fSpeed; // Move velocity.
+            rbody.MovePosition(rbody.position + m_moveVel * Time.deltaTime); // Move the player.
+            CmdUpdateMovement(transform.position); // Send information to the server.
         }
-        transform.Translate(m_moveVel * Time.deltaTime);
     }
 
     [Command]
-    void CmdUpdateMovement(Vector3 vel, Vector3 pos)
+    void CmdUpdateMovement(Vector3 pos)
     {
         transform.position = pos;
-        m_moveVel = vel;
+        RpcUpdateMovement(transform.position);
     }
 
     [ClientRpc]
-    void RpcUpdateMovement(Vector3 vel, Vector3 pos)
+    void RpcUpdateMovement(Vector3 pos)
     {
-        if(hasAuthority)
-        {
-            return;
-        }
-        m_moveVel = vel;
-
+        transform.position = pos;
     }
 
     void OnCollisionEnter2D(Collision2D col)
