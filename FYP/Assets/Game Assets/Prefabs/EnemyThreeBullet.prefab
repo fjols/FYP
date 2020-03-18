@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 1166006934388228788}
   - component: {fileID: 5374606964545294213}
   - component: {fileID: 1347882453798264051}
+  - component: {fileID: 6878178241909653100}
   m_Layer: 0
-  m_Name: laser-bolts_0
+  m_Name: EnemyThreeBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,7 +121,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e179f133c50dea346bc17b7893f1b620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_fSpeed: 4
-  m_fLifetime: 5
   m_fWaveFrequency: 3
   m_fMagnitude: 2
+  m_fSpeed: 4
+  m_fLifetime: 5
+--- !u!114 &6878178241909653100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7383777231487619136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8258ea15b8f74c4889ce485d21cbbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0

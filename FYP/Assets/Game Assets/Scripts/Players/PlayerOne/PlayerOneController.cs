@@ -53,7 +53,7 @@ public class PlayerOneController : NetworkBehaviour
             Vector2 moveInput = new Vector2(Input.GetAxisRaw(m_sLeftHorizontalAxis), Input.GetAxisRaw(m_sLeftVerticalAxis)); // Get the axises the player is using.
             m_moveVel = moveInput.normalized * m_fSpeed; // Move velocity.
             rbody.MovePosition(rbody.position + m_moveVel * Time.deltaTime); // Move the player.
-            CmdUpdateMovement(transform.position); // Send information to the server.
+            CmdUpdateMovement(rbody.position); // Send information to the server.
         }
     }
 
@@ -61,7 +61,7 @@ public class PlayerOneController : NetworkBehaviour
     void CmdUpdateMovement(Vector3 pos)
     {
         transform.position = pos;
-        RpcUpdateMovement(transform.position);
+       // RpcUpdateMovement(pos);
     }
 
     [ClientRpc]
