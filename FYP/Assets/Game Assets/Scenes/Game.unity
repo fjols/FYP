@@ -127,6 +127,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -502986172940477232, guid: a58d1eb84d526fd468f62e65dea4c160,
+        type: 3}
+      propertyPath: m_TransformSyncMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -502986172940477232, guid: a58d1eb84d526fd468f62e65dea4c160,
+        type: 3}
+      propertyPath: m_SyncRotationAxis
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5086157225046729960, guid: a58d1eb84d526fd468f62e65dea4c160,
         type: 3}
       propertyPath: m_Name
@@ -559,7 +569,7 @@ PrefabInstance:
     - target: {fileID: 2672377043005695519, guid: b33f9f74a5a5279468e5042b12059b63,
         type: 3}
       propertyPath: m_SpawnPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2672377043005695519, guid: b33f9f74a5a5279468e5042b12059b63,
         type: 3}
@@ -598,6 +608,12 @@ PrefabInstance:
       propertyPath: m_SpawnPrefabs.Array.data[1]
       value: 
       objectReference: {fileID: 936878558038251972, guid: 2e61b4b4a0f34f6499a8f13e3a009e84,
+        type: 3}
+    - target: {fileID: 2672377043005695519, guid: b33f9f74a5a5279468e5042b12059b63,
+        type: 3}
+      propertyPath: m_SpawnPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 5086157225046729960, guid: a58d1eb84d526fd468f62e65dea4c160,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b33f9f74a5a5279468e5042b12059b63, type: 3}

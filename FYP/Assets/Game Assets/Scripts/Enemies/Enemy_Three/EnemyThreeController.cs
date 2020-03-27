@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class EnemyThreeController : MonoBehaviour
+public class EnemyThreeController : NetworkBehaviour
 {
     public SpawnEnemy m_enemyHandler;
     public static int m_enemiesLeft = SpawnEnemy.m_iCurrentEnemyCount;
@@ -28,7 +29,14 @@ public class EnemyThreeController : MonoBehaviour
         m_pos += transform.up * Time.deltaTime * -m_fSpeed; // Move the enemy down the screen.
         transform.position = m_pos + transform.right * Mathf.Cos(Time.time * 0.1f) * 2f * Mathf.Sin(Time.time * 4) * 2 * Mathf.Cos(Time.time); // Move it in a cool wave
         //transform.Rotate(Vector3.forward * 40f * Time.deltaTime); // Rotate the enemy.
+        CmdUpdateMovement(transform.position);
         OffscreenDestroy(); // Destroy the enemy once it gets off screen.
+    }
+
+    [Command]
+    void CmdUpdateMovement(Vector3 pos)
+    {
+        transform.position = pos;
     }
 
     void OffscreenDestroy()

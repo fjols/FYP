@@ -22,8 +22,11 @@ public class Shooting : NetworkBehaviour
 
     void Shoot()
     {
+        if(isLocalPlayer)
+        {
+            CmdSpawn(firePoint.position);
+        }
         //Instantiate(m_bullet, firePoint.position, firePoint.rotation); // Make a bullet spawn.
-        CmdSpawn(firePoint.position);
     }
 
     [Command]
