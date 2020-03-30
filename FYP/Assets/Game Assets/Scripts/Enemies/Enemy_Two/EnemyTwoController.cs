@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 
-public class EnemyTwoController : MonoBehaviour
+public class EnemyTwoController : NetworkBehaviour
 {
     Animator m_anim;
     public SpawnEnemy m_enemyHandler;
@@ -26,10 +27,11 @@ public class EnemyTwoController : MonoBehaviour
     
     void Update()
     {
-        m_pos += transform.up * Time.deltaTime * -m_fSpeed;
+        m_pos += transform.up * Time.deltaTime * -m_fSpeed; // Move the enemy.
         transform.position = m_pos;
-        OffscreenDestroy();
-        if(m_enemiesLeft <= 0)
+        CmdUpdateMovement(transform.position); // Run the command function.
+        OffscreenDestroy(); // Destroy the enemy when it gets offscreen.
+        if(m_enemiesLeft <= 0) // If there are no enemies then reload the scene to make more enemies.
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reset the scene.
             SpawnEnemy.m_iCurrentEnemyCount = 0; // Spawn more enemies.
@@ -44,6 +46,12 @@ public class EnemyTwoController : MonoBehaviour
             m_enemiesLeft--;
             Destroy(gameObject); // Don't need to play the animation here as you can't see it.
         }
+    }
+
+    [Command]
+    void CmdUpdateMovement(Vector3 pos)
+    {
+        transform.position = pos;
     }
 
     void OnCollisionEnter2D(Collision2D col)

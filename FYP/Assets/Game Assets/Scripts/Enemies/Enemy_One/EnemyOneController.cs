@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 
 /*
     This class is for the first enemy type.
     It will control it and animate it.
  */
-public class EnemyOneController : MonoBehaviour
+public class EnemyOneController : NetworkBehaviour
 {
     Animator m_anim; // The animator component.
     public SpawnEnemy m_enemyHandler;
@@ -35,6 +36,7 @@ public class EnemyOneController : MonoBehaviour
     {
         pos += transform.up * Time.deltaTime * -m_fSpeed; // Make the enemy move down the screen.
         transform.position = pos + transform.right * Mathf.Sin(Time.time * m_fWaveFrequency) * m_fMagnitude; // Move it in a sine wave.
+        CmdUpdateMovement(transform.position);
         OffscreenDestroy(); // Check if enemy is offscreen.
 
         if(m_enemiesLeft <= 0) // If there are no enemies left.
@@ -52,6 +54,12 @@ public class EnemyOneController : MonoBehaviour
             m_enemiesLeft--;
             Destroy(gameObject); // Don't need to play the animation here as you can't see it.
         }
+    }
+
+    [Command]
+    void CmdUpdateMovement(Vector3 pos)
+    {
+        transform.position = pos;
     }
 
     void OnCollisionEnter2D(Collision2D col)

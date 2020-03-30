@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         rbody = GetComponent<Rigidbody2D>(); // Get the component.
         m_anim = GetComponent<Animator>(); // Get the animator component.
-        healthText.text = "Health: " + m_iHealth;
+        healthText.text = "Health: " + m_iHealth; // Update the text.
     }
 
     void FixedUpdate()
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movePlayer();
+        movePlayer(); // Run the function.
     }
 
     public void movePlayer()

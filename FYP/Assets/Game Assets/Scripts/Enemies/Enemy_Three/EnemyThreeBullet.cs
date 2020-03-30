@@ -27,8 +27,8 @@ public class EnemyThreeBullet : MonoBehaviour
     
     void Update()
     {
-            m_pos += transform.up * Time.deltaTime * -m_fSpeed;
-            transform.position = m_pos;
+            m_pos += transform.up * Time.deltaTime * -m_fSpeed; // Update the position.
+            transform.position = m_pos; // Update the positon.
         
     }
 
