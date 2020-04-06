@@ -36,7 +36,11 @@ public class EnemyOneController : NetworkBehaviour
     {
         pos += transform.up * Time.deltaTime * -m_fSpeed; // Make the enemy move down the screen.
         transform.position = pos + transform.right * Mathf.Sin(Time.time * m_fWaveFrequency) * m_fMagnitude; // Move it in a sine wave.
-        CmdUpdateMovement(transform.position);
+        if(isLocalPlayer)
+        {
+            CmdUpdateMovement(transform.position);    
+        }
+        //CmdUpdateMovement(transform.position);
         OffscreenDestroy(); // Check if enemy is offscreen.
 
         if(m_enemiesLeft <= 0) // If there are no enemies left.
@@ -68,6 +72,8 @@ public class EnemyOneController : NetworkBehaviour
         else if(col.gameObject.CompareTag("EnemyOne") ||
         col.gameObject.CompareTag("EnemyTwo") ||
         col.gameObject.CompareTag("EnemyTwoBullet")){ m_bDead = false; } // Enemy also shouldn't die if it is hit by another enemy.
+        else if(col.gameObject.CompareTag("EnemyThree")){ m_bDead = false; }
+        else if(col.gameObject.CompareTag("EnemyThreeBullet")){ m_bDead = false; }
         else if(m_bDead == false)
         {
             m_bDead = true; // Set it to true it will play the death animation.

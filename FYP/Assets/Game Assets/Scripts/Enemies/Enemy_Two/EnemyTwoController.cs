@@ -29,7 +29,11 @@ public class EnemyTwoController : NetworkBehaviour
     {
         m_pos += transform.up * Time.deltaTime * -m_fSpeed; // Move the enemy.
         transform.position = m_pos;
-        CmdUpdateMovement(transform.position); // Run the command function.
+        if(isLocalPlayer)
+        {
+            CmdUpdateMovement(transform.position); // Run the command function.
+        }
+        //CmdUpdateMovement(transform.position); // Run the command function.
         OffscreenDestroy(); // Destroy the enemy when it gets offscreen.
         if(m_enemiesLeft <= 0) // If there are no enemies then reload the scene to make more enemies.
         {
@@ -60,6 +64,8 @@ public class EnemyTwoController : NetworkBehaviour
         else if(col.gameObject.CompareTag("EnemyOne")){ m_bDead = false; } // Enemy also shouldn't die if it is hit by another enemy.
         else if(col.gameObject.CompareTag("EnemyTwoBullet") ||
                 col.gameObject.CompareTag("EnemyTwo")) { m_bDead = false; } // Do not destroy if its related to enemy.
+        else if(col.gameObject.CompareTag("EnemyThree")){ m_bDead = false; }
+        else if(col.gameObject.CompareTag("EnemyThreeBullet")){ m_bDead = false; }
         else if(m_bDead == false)
         {
             m_bDead = true; // Set it to true it will play the death animation.

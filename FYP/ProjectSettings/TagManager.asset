@@ -11,6 +11,8 @@ TagManager:
   - EnemyTwo
   - EnemyTwoBullet
   - Powerup
+  - EnemyThree
+  - EnemyThreeBullet
   layers:
   - Default
   - TransparentFX
