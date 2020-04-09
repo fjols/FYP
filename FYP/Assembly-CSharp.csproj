@@ -84,6 +84,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Powerups\FasterBullet.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Powerups\PowerUpSpawning.cs" />
      <Compile Include="Assets\MoveForwards.cs" />
+     <Compile Include="Assets\Shield.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
