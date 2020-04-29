@@ -58,6 +58,8 @@
      <Compile Include="Assets\Game Assets\Prefabs\Networking\PlayerController.cs" />
      <Compile Include="Assets\Game Assets\Prefabs\Networking\PlayerObject.cs" />
      <Compile Include="Assets\Game Assets\Scriptable Objects\Powerup.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Animation\FadeAnimator.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Buttons\LANButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Camera\Shake.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_One\EnemyOneBullet.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Enemies\Enemy_One\EnemyOneController.cs" />

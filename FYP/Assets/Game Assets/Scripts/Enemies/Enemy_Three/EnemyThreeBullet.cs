@@ -34,8 +34,9 @@ public class EnemyThreeBullet : MonoBehaviour
 
     void OnCollision2D(Collision2D col)
     {
-        if(col.gameObject.tag == "Player" || col.gameObject.tag == "PlayerTwo")
+        if(col.gameObject.tag == "PlayerUnit")
         {
+            Debug.Log("Hit");
             Destroy(gameObject);
         }
     }
