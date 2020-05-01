@@ -17,6 +17,7 @@ TagManager:
   - Shield
   - LANButton
   - SamePC
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX

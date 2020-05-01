@@ -6,19 +6,22 @@ using UnityEngine.Networking;
 
 public class PlayerOneController : NetworkBehaviour
 {
+    [Tooltip("Speed of the player")]
     public float m_fSpeed = 4.0f; // Speed of the player
-    public Rigidbody rbody; // Rigidbody2D component.
+    [Tooltip("Rigidbody2D component.")]
+    public Rigidbody2D rbody; // Rigidbody2D component.
+    [Tooltip("Movement velocity")]
     public Vector3 m_moveVel; // Movement velocity.
-    public float m_fheadingAngle; // Heading angle, used for rotation.
+    [Tooltip("This should be the joystick used for moving horizontally.")]
     public string m_sLeftHorizontalAxis = "LeftJoystickHorizontal"; // Holds a string that is the left joystick horizontal axis.
+    [Tooltip("This should be the joystick used for moving vertically.")]
     public string m_sLeftVerticalAxis = "LeftJoystickVertical"; // Holds a string that is the left joystick vertical axis.
+    [Tooltip("This button should reset the game.")]
     public string m_sResetButton = "reset"; // Resets the level.
+    [Tooltip("The point from which the bullets fire.")]
     public Transform firePoint; // Where the bullet spawns.
+    [Tooltip("How much health a player has.")]
     public int m_iHealth = 3; // Amount of hits the player can take. One hit = 1 health lost.
-
-    public Shake shake; // Shake class object. (Shake.cs).
-   // public GameObject camContainer; // Gameobject which contains the camera.
-    public float shakeStrength = 0.1f; // Strength of the shake.
     public Animator m_anim; // The animator component.
     public bool m_bDead = false; // Is the player dead.
 
@@ -28,6 +31,9 @@ public class PlayerOneController : NetworkBehaviour
 
     private Vector3 bestGuessPosition;
 
+    [SyncVar] private Vector3 syncPos;
+    private float m_fLerpFactor = 15.0f;
+
     void Awake()
     {
        // shake = camContainer.GetComponent<Shake>();
@@ -35,7 +41,7 @@ public class PlayerOneController : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rbody = GetComponent<Rigidbody>(); // Get the component.
+        rbody = GetComponent<Rigidbody2D>(); // Get the component.
         m_anim = GetComponent<Animator>(); // Get the animator component.
         healthText.text = "Health: " + m_iHealth;
     }
@@ -52,23 +58,30 @@ public class PlayerOneController : NetworkBehaviour
         {
             Vector2 moveInput = new Vector2(Input.GetAxisRaw(m_sLeftHorizontalAxis), Input.GetAxisRaw(m_sLeftVerticalAxis)); // Get the axises the player is using.
             m_moveVel = moveInput.normalized * m_fSpeed; // Move velocity.
-            rbody.MovePosition(rbody.position + m_moveVel * Time.deltaTime); // Move the player.
-            CmdUpdateMovement(rbody.position); // Send information to the server.
+            transform.position += m_moveVel * Time.deltaTime; // Move the player.
+            TransmitPosition();
+            LerpPosition();
         }
     }
 
     [Command]
     void CmdUpdateMovement(Vector3 pos)
     {
-        transform.position = pos;
-       // RpcUpdateMovement(pos);
+        syncPos = pos;
     }
 
-    [ClientRpc]
-    void RpcUpdateMovement(Vector3 pos)
+    void LerpPosition()
     {
-        transform.position = pos;
+        if(!isLocalPlayer)
+            transform.position = Vector3.Lerp(transform.position, syncPos, Time.deltaTime * m_fLerpFactor);
     }
+
+    [ClientCallback]
+    void TransmitPosition()
+    {
+        CmdUpdateMovement(transform.position);
+    }
+
 
     void OnCollisionEnter2D(Collision2D col)
     {

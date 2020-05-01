@@ -16,15 +16,18 @@ public class EnemyOneController : NetworkBehaviour
     public static int m_enemiesLeft = SpawnEnemy.m_iCurrentEnemyCount;
     public float m_fSpeed; // Speed of the enemy.
     private bool m_bDead; // If this is true the explosion animation in the animator will be played.
-    private Rigidbody2D rb; // Rigidbody component.
+    private Rigidbody2D rb; // Rigidbody2D component.
     Vector3 pos; // Position.
     public float m_fWaveFrequency = 2.5f; // How fast the sine wave moves.
     public float m_fMagnitude = 0.5f; // The magnitude.
 
+    private float m_fLerpRate; // Rate to lerp.
+    [SyncVar] private Vector3 syncPosition;
+
     void Start()
     {
         m_anim = GetComponent<Animator>(); // Get the animator component.
-        rb = GetComponent<Rigidbody2D>(); // Get the rigidbody component.*
+        rb = GetComponent<Rigidbody2D>(); // Get the rigidbody2D component.
         m_enemyHandler = GetComponent<SpawnEnemy>();
         pos = transform.position; // The pos vector is set to the position of the enemy.
         m_bDead = false; // Set it to false.
@@ -36,11 +39,9 @@ public class EnemyOneController : NetworkBehaviour
     {
         pos += transform.up * Time.deltaTime * -m_fSpeed; // Make the enemy move down the screen.
         transform.position = pos + transform.right * Mathf.Sin(Time.time * m_fWaveFrequency) * m_fMagnitude; // Move it in a sine wave.
-        if(isLocalPlayer)
-        {
-            CmdUpdateMovement(transform.position);    
-        }
-        //CmdUpdateMovement(transform.position);
+        
+        TransmitEnemyPos(); // Transmit the enemy position to the server.
+        LerpPosition(); // Lerp the position for smooth movement for clients.
         OffscreenDestroy(); // Check if enemy is offscreen.
 
         if(m_enemiesLeft <= 0) // If there are no enemies left.
@@ -63,7 +64,29 @@ public class EnemyOneController : NetworkBehaviour
     [Command]
     void CmdUpdateMovement(Vector3 pos)
     {
-        transform.position = pos;
+        syncPosition = pos;
+    }
+
+    [ClientCallback]
+    void TransmitEnemyPos()
+    {
+        CmdUpdateMovement(transform.position);
+    }
+
+    void LerpPosition()
+    {
+        if(!isLocalPlayer)
+            transform.position = Vector3.Lerp(transform.position, syncPosition, Time.deltaTime * m_fLerpRate);
+    }
+
+    [ClientRpc]
+    void RpcDestroyEnemy()
+    {
+        m_bDead = true;
+        m_fSpeed = 0; // Set speed to 0.
+        m_fWaveFrequency = 0; // Set the frequency of the wave to 0.
+        m_fMagnitude = 0; // Set the magnitude to 0.
+        StartCoroutine(DestroySequence());
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -83,10 +106,17 @@ public class EnemyOneController : NetworkBehaviour
             m_fSpeed = 0; // Set speed to 0.
             m_fWaveFrequency = 0; // Set the frequency of the wave to 0.
             m_fMagnitude = 0; // Set the magnitude to 0.
-            m_anim.SetBool("Death", m_bDead); // Set the animator to play the animation
+            StartCoroutine(DestroySequence());
+            RpcDestroyEnemy();
             Destroy(col.gameObject); // Destroy the bullet.
-            Destroy(gameObject, 1f); // Destroy the enemy after the animations played.   
             m_enemiesLeft--; // Decrement the enemies left in the game counter.
         }
+    }
+
+    IEnumerator DestroySequence()
+    {
+        m_anim.SetBool("Death", m_bDead);
+        yield return new WaitForSeconds(2);
+        Destroy(gameObject);
     }
 }
