@@ -18,6 +18,8 @@ TagManager:
   - LANButton
   - SamePC
   - PlayerBullet
+  - BossBullet
+  - Boss
   layers:
   - Default
   - TransparentFX

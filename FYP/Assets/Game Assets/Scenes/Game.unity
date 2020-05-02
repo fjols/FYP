@@ -464,6 +464,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemy-big_0
       objectReference: {fileID: 0}
+    - target: {fileID: 140155437874049929, guid: ad8732199357b8144a3c44609e37c30a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
     - target: {fileID: 644679584271624553, guid: ad8732199357b8144a3c44609e37c30a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -602,7 +607,7 @@ PrefabInstance:
     - target: {fileID: 2672377043005695518, guid: b33f9f74a5a5279468e5042b12059b63,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2672377043005695518, guid: b33f9f74a5a5279468e5042b12059b63,
         type: 3}
@@ -838,7 +843,7 @@ Transform:
   m_Children:
   - {fileID: 519420032}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1610115577
 MonoBehaviour:

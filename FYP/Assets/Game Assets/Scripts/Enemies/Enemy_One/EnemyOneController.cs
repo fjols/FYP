@@ -97,6 +97,7 @@ public class EnemyOneController : NetworkBehaviour
         col.gameObject.CompareTag("EnemyTwoBullet")){ m_bDead = false; } // Enemy also shouldn't die if it is hit by another enemy.
         else if(col.gameObject.CompareTag("EnemyThree")){ m_bDead = false; }
         else if(col.gameObject.CompareTag("EnemyThreeBullet")){ m_bDead = false; }
+        else if(col.gameObject.CompareTag("Boss") || col.gameObject.CompareTag("BossBullet")){ m_bDead = false; }
         else if(m_bDead == false)
         {
             m_bDead = true; // Set it to true it will play the death animation.

@@ -5,12 +5,17 @@ using UnityEngine.Networking;
 
 public class EnemyThreeController : NetworkBehaviour
 {
-    public SpawnEnemy m_enemyHandler;
-    public static int m_enemiesLeft = SpawnEnemy.m_iCurrentEnemyCount;
-    public float m_fSpeed;
-    private bool m_bDead;
-    private Rigidbody2D rb;
-    Vector3 m_pos;
+    [Tooltip("This component spawns the enemy.")]
+    public SpawnEnemy m_enemyHandler; // Component which handles enemies.
+    [Tooltip("How many enemies are left.")]
+    public static int m_enemiesLeft = SpawnEnemy.m_iCurrentEnemyCount; // How many enemies are left.
+    [Tooltip("Speed of the enemy.")]
+    public float m_fSpeed; // Speed of the enemy.
+    private bool m_bDead; // Is the enemy dead.
+    private Rigidbody2D rb; // Rigidbody2D component.
+    Vector3 m_pos; // Position of the enemy.
+    private float m_fLerpRate = 15.0f; // The rate to lerp positions at.
+    [SyncVar] private Vector3 m_syncPos;
 
 
     // Start is called before the first frame update
@@ -29,18 +34,27 @@ public class EnemyThreeController : NetworkBehaviour
         m_pos += transform.up * Time.deltaTime * -m_fSpeed; // Move the enemy down the screen.
         transform.position = m_pos + transform.right * Mathf.Cos(Time.time * 0.1f) * 2f * Mathf.Sin(Time.time * 4) * 2 * Mathf.Cos(Time.time); // Move it in a cool wave
         //transform.Rotate(Vector3.forward * 40f * Time.deltaTime); // Rotate the enemy.
-        if(isLocalPlayer)
-        {
-            CmdUpdateMovement(transform.position);
-        }
-       // CmdUpdateMovement(transform.position);
+        TransmitEnemyPos();
+        LerpEnemyPos();
         OffscreenDestroy(); // Destroy the enemy once it gets off screen.
     }
 
     [Command]
     void CmdUpdateMovement(Vector3 pos)
     {
-        transform.position = pos;
+        m_syncPos = pos;
+    }
+
+    [ClientCallback]
+    void TransmitEnemyPos()
+    {
+        CmdUpdateMovement(transform.position);
+    }
+
+    void LerpEnemyPos()
+    {
+        if(!isLocalPlayer)
+            transform.position = Vector3.Lerp(transform.position, m_syncPos, Time.deltaTime * m_fLerpRate);
     }
 
     void OffscreenDestroy()
@@ -53,12 +67,22 @@ public class EnemyThreeController : NetworkBehaviour
         }
     }
 
+    [ClientRpc]
+    void RpcDeathSequence()
+    {
+        m_bDead = true;
+        m_fSpeed = 0;
+        StartCoroutine(DeathSequence());
+    }
+
     void OnCollisionEnter2D(Collision2D col)
     {
         if(col.gameObject.CompareTag("EnemyBulletOne")){ m_bDead = false; } // Enemy shouldn't die if hit by a projectile from another enemy.
         else if(col.gameObject.CompareTag("EnemyOne")){ m_bDead = false; } // Enemy also shouldn't die if it is hit by another enemy.
         else if(col.gameObject.CompareTag("EnemyTwoBullet") ||
                 col.gameObject.CompareTag("EnemyTwo")) { m_bDead = false; } // Do not destroy if its related to enemy.
+        else if(col.gameObject.CompareTag("Boss") || col.gameObject.CompareTag("BossBullet")){ m_bDead = false; }
+        else if(col.gameObject.CompareTag("EnemyThree") || col.gameObject.CompareTag("EnemyThreeBullet")){ m_bDead = false; }
         else if(m_bDead == false)
         {
             m_bDead = true; // Set it to true it will play the death animation.
@@ -70,8 +94,16 @@ public class EnemyThreeController : NetworkBehaviour
             //m_fMagnitude = 0; // Set the magnitude to 0.
            // m_anim.SetBool("Death", m_bDead); // Set the animator to play the animation
             Destroy(col.gameObject); // Destroy the bullet.
-            Destroy(gameObject, 1f); // Destroy the enemy after the animations played.   
+            StartCoroutine(DeathSequence());
+            RpcDeathSequence();
             m_enemiesLeft--; // Decrement the enemies left in the game counter.
         }
+    }
+
+    IEnumerator DeathSequence()
+    {
+        m_fSpeed = 0;
+        yield return new WaitForSeconds(0);
+        Destroy(gameObject);
     }
 }

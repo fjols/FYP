@@ -8,6 +8,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 public class SpawnEnemy : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class SpawnEnemy : MonoBehaviour
     public Text m_timeText;
     private List<GameObject> m_enemyArray; // A list of enemy gameobjects.
     private Vector2 m_enemyPosition; // Position of the enemy.
+    float elapsedTime;
     void Start()
     {
         m_enemyArray = new List<GameObject>(); // Initialise the list.
@@ -30,14 +32,20 @@ public class SpawnEnemy : MonoBehaviour
 
     void Update()
     {
-        if(Timer() <= 0.0f) // If the timer hits 0 then start generating enemies.
-        {
-            if(m_iCurrentEnemyCount < m_iEnemyAmount)
+        //if(Timer(5, false) <= 0.0f) // If the timer hits 0 then start generating enemies.
+        //{
+            if(Timer(5, true) >= 5 && m_iEnemyAmount < 5)
             {
                 m_enemyArray.Add(Instantiate(m_enemyArray[Random.Range(0, 3)], RandomizePosition(), m_enemy.transform.rotation)); // Add the spawned enemies to the list so they can be tracked and removed when killed.
-                m_iCurrentEnemyCount++; // Add the enemy count.
+                m_iEnemyAmount += 1;
+                if(Timer(20, true) >= 5)
+                {
+                    Debug.Log("MINUS ONE FROM AMOUNT");
+                    m_iEnemyAmount -= 1;
+                }
+                m_iCurrentEnemyCount = m_iEnemyAmount; // Add the enemy count.
             }
-        }
+       // }
     }
 
     Vector3 RandomizePosition()
@@ -47,15 +55,17 @@ public class SpawnEnemy : MonoBehaviour
         return m_enemyPosition; // Return the vector with the randomised values.
     }
 
-    float Timer() // Delay the start of the game a bit so players can join.
+    float Timer(float time, bool reset) // Delay the start of the game a bit so players can join.
     {
-        m_fTime -= Time.deltaTime; // Count down.
-        m_timeText.text = m_fTime.ToString(); // Display the time as text.
-        if(m_fTime <= 0.0f) // If the timer hits 0
+        elapsedTime += Time.deltaTime; // Count down.
+        if(elapsedTime >= time + 1)
         {
-            m_timeText.text = ""; // Display no text [TODO]: Change this to disable the text component or something.
+            if(reset)
+            {
+                elapsedTime = 0;
+            }
         }
-        return m_fTime; // Return the time value.
+        return elapsedTime; // Return the time value.
     }
 }
 
