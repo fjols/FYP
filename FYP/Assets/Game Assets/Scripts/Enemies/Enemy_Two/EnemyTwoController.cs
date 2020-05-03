@@ -37,11 +37,6 @@ public class EnemyTwoController : NetworkBehaviour
         TransmitEnemyPos();
         LerpEnemyPos();
         OffscreenDestroy(); // Destroy the enemy when it gets offscreen.
-        if(m_enemiesLeft <= 0) // If there are no enemies then reload the scene to make more enemies.
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reset the scene.
-            SpawnEnemy.m_iCurrentEnemyCount = 0; // Spawn more enemies.
-        }
     }
 
     void OffscreenDestroy()

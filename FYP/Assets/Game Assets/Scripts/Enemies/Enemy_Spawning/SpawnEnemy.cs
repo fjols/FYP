@@ -34,18 +34,20 @@ public class SpawnEnemy : MonoBehaviour
     {
         //if(Timer(5, false) <= 0.0f) // If the timer hits 0 then start generating enemies.
         //{
-            if(Timer(5, true) >= 5 && m_iEnemyAmount < 5)
-            {
-                m_enemyArray.Add(Instantiate(m_enemyArray[Random.Range(0, 3)], RandomizePosition(), m_enemy.transform.rotation)); // Add the spawned enemies to the list so they can be tracked and removed when killed.
-                m_iEnemyAmount += 1;
-                if(Timer(20, true) >= 5)
-                {
-                    Debug.Log("MINUS ONE FROM AMOUNT");
-                    m_iEnemyAmount -= 1;
-                }
-                m_iCurrentEnemyCount = m_iEnemyAmount; // Add the enemy count.
-            }
+            //if(Timer(5, true) >= 5 && m_iEnemyAmount < 5)
+           // {
+          //      m_enemyArray.Add(Instantiate(m_enemyArray[Random.Range(0, 3)], RandomizePosition(), m_enemy.transform.rotation)); // Add the spawned enemies to the list so they can be tracked and removed when killed.
+           //     m_iEnemyAmount += 1;
+           //     if(Timer(20, true) >= 5)
+           //     {
+          // //         Debug.Log("MINUS ONE FROM AMOUNT");
+           //         m_iEnemyAmount -= 1;
+           //     }
+           //     m_iCurrentEnemyCount = m_iEnemyAmount; // Add the enemy count.
+           
+        //    }
        // }
+       Timer(2.0f, true);
     }
 
     Vector3 RandomizePosition()
@@ -60,6 +62,8 @@ public class SpawnEnemy : MonoBehaviour
         elapsedTime += Time.deltaTime; // Count down.
         if(elapsedTime >= time + 1)
         {
+            m_enemyArray.Add(Instantiate(m_enemyArray[Random.Range(0, 3)], RandomizePosition(), m_enemy.transform.rotation)); // Add the spawned enemies to the list so they can be tracked and removed when killed.
+            Debug.Log("ENEMY SPAWNED");
             if(reset)
             {
                 elapsedTime = 0;

@@ -12,17 +12,45 @@ public class MenuController : MonoBehaviour
 
     public void LoadLANGame()
     {
-        if(Input.GetButtonDown(button))
-        {
-            SceneManager.LoadScene(scene);
-        }
+        loadScene(scene);
     }
     
     public void LoadGame()
     {
+        loadScene(scene);
+    }
+
+    public void LoadShiponomicon()
+    {
+        loadScene(scene);
+    }
+
+    public void LoadEnemyOne()
+    {
+        loadScene(scene);
+    }
+
+    public void LoadEnemyTwo()
+    {
+        loadScene(scene);
+    }
+
+    public void LoadEnemyThree()
+    {
+        loadScene(scene);
+    }
+
+    public void LoadBoss()
+    {
+        loadScene(scene);
+    }
+
+    void loadScene(string scene_)
+    {
+        scene_ = scene;
         if(Input.GetButtonDown(button))
         {
-                SceneManager.LoadScene(scene);
+            SceneManager.LoadScene(scene_);
         }
     }
 }

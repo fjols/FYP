@@ -43,12 +43,6 @@ public class EnemyOneController : NetworkBehaviour
         TransmitEnemyPos(); // Transmit the enemy position to the server.
         LerpPosition(); // Lerp the position for smooth movement for clients.
         OffscreenDestroy(); // Check if enemy is offscreen.
-
-        if(m_enemiesLeft <= 0) // If there are no enemies left.
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reset the scene.
-            SpawnEnemy.m_iCurrentEnemyCount = 0; // Spawn more enemies.
-        }
     }
 
     void OffscreenDestroy()
