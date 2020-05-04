@@ -88,6 +88,9 @@
      <Compile Include="Assets\Game Assets\Scripts\Players\Shooting\Shooting.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Powerups\FasterBullet.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Powerups\PowerUpSpawning.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\SamePC\Player\Bullet\PlayerBullets.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\SamePC\Player\PlayerControllerOne.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\SamePC\Player\PlayerShoot.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Shiponomicon\Back.cs" />
      <Compile Include="Assets\MoveForwards.cs" />
      <Compile Include="Assets\Shield.cs" />

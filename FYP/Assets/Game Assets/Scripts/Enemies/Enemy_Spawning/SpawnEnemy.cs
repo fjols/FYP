@@ -47,7 +47,7 @@ public class SpawnEnemy : MonoBehaviour
            
         //    }
        // }
-       Timer(2.0f, true);
+       //Timer(1.0f, true);
     }
 
     Vector3 RandomizePosition()
