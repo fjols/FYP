@@ -88,6 +88,9 @@
      <Compile Include="Assets\Game Assets\Scripts\Players\Shooting\Shooting.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Powerups\FasterBullet.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Powerups\PowerUpSpawning.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\SamePC\Enemies\EnemyOne\EnemyOneManager.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\SamePC\Enemies\EnemyThree\EnemyThreeManager.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\SamePC\Enemies\EnemyTwo\EnemyTwoManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\SamePC\Player\Bullet\PlayerBullets.cs" />
      <Compile Include="Assets\Game Assets\Scripts\SamePC\Player\PlayerControllerOne.cs" />
      <Compile Include="Assets\Game Assets\Scripts\SamePC\Player\PlayerShoot.cs" />

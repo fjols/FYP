@@ -19,7 +19,7 @@ public class MenuController : MonoBehaviour
     {
         loadScene(scene);
     }
-
+    
     public void LoadShiponomicon()
     {
         loadScene(scene);

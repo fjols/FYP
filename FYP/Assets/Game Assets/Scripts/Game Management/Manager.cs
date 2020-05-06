@@ -10,6 +10,7 @@ public class Manager : MonoBehaviour
     public static int m_iPlayerOneHealth = 3;
     public static int m_iPlayerTwoHealth = 3;
     public Text scoreText; // The text associated with the score.
+    public Text backgroundText; // Scores background text.
     public Text playerOneHealthText; // Player health text.
     public Text playerTwoHealthText; // Player two health text.
 
@@ -29,12 +30,14 @@ public class Manager : MonoBehaviour
         Debug.Log("IncreaseScore method ran.");
         m_iScore += 1; // Increment the score.
         scoreText.text = "Score: " + m_iScore.ToString(); // Update the text with the score value.
+        backgroundText.text = scoreText.text;
     }
 
     void Update()
     {
        // RestartGame();
         scoreText.text = "Score: " + m_iScore.ToString(); // Update the text with the score value.
+        backgroundText.text = scoreText.text;
     }
 /*
     void RestartGame()
