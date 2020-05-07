@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class PlayerOneController : NetworkBehaviour
 {
@@ -106,6 +107,7 @@ public class PlayerOneController : NetworkBehaviour
                 m_anim.SetBool("Death", m_bDead); // Set the animator to play the animation
                 Destroy(gameObject, 1f); // Destroy the enemy after the animations played.
                 //shake.CameraShake(shakeStrength, 0.5f); // Shake the camera.   
+                SceneManager.LoadScene("death");
             }
             m_bDead = false; // Set it to true it will play the death animation.
             //shake.CameraShake(shakeStrength, 0.5f); // Shake the camera.   

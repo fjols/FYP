@@ -85,6 +85,7 @@ public class EnemyTwoController : NetworkBehaviour
         else if(col.gameObject.CompareTag("EnemyThree")){ m_bDead = false; }
         else if(col.gameObject.CompareTag("EnemyThreeBullet")){ m_bDead = false; }
         else if(col.gameObject.CompareTag("Boss") || col.gameObject.CompareTag("BossBullet")){ m_bDead = false; }
+        else if (col.gameObject.CompareTag("PlayerUnit")) {m_bDead = false; SceneManager.LoadScene("death");}
         else if(m_bDead == false)
         {
             m_bDead = true; // Set it to true it will play the death animation.

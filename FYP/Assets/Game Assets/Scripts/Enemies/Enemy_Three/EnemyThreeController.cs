@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class EnemyThreeController : NetworkBehaviour
 {
@@ -83,6 +84,7 @@ public class EnemyThreeController : NetworkBehaviour
                 col.gameObject.CompareTag("EnemyTwo")) { m_bDead = false; } // Do not destroy if its related to enemy.
         else if(col.gameObject.CompareTag("Boss") || col.gameObject.CompareTag("BossBullet")){ m_bDead = false; }
         else if(col.gameObject.CompareTag("EnemyThree") || col.gameObject.CompareTag("EnemyThreeBullet")){ m_bDead = false; }
+        else if (col.gameObject.CompareTag("PlayerUnit")) {m_bDead = false; SceneManager.LoadScene("death");}
         else if(m_bDead == false)
         {
             m_bDead = true; // Set it to true it will play the death animation.

@@ -8,7 +8,6 @@ public class MenuController : MonoBehaviour
 {
     public string button;
     public string scene;
-    bool selected;
 
     public void LoadLANGame()
     {

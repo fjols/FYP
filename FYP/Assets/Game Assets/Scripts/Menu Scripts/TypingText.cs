@@ -28,6 +28,21 @@ public class TypingText : MonoBehaviour
         foreach(char character in m_message)
         {
             m_text.text += character; // Add character to the text component.
+            switch(character)
+            {
+                case '.': // If the character is a full stop then wait a second.
+                    yield return new WaitForSeconds(1);
+                    break;
+                case '!': // If the character is an exclamation mark then wait a second.
+                    yield return new WaitForSeconds(1);
+                    break;
+                case '?': // If the character is a question mark then wait a second.
+                    yield return new WaitForSeconds(1);
+                    break;
+                case ',': // If the character is a comma then wait half a second.
+                    yield return new WaitForSeconds(0.5f);
+                    break;
+            }
             yield return new WaitForSeconds(m_typingSpeed); // Wait for this amount of time before adding another one.
         }
     }

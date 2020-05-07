@@ -14,6 +14,7 @@ public class Manager : MonoBehaviour
     public Text playerOneHealthText; // Player health text.
     public Text playerTwoHealthText; // Player two health text.
 
+
     public Text winText;
     public PlayerOneController playerOne;
     public PlayerTwoController playerTwo;
@@ -28,9 +29,9 @@ public class Manager : MonoBehaviour
     public void IncreaseScore()
     {
         Debug.Log("IncreaseScore method ran.");
-        m_iScore += 1; // Increment the score.
-        scoreText.text = "Score: " + m_iScore.ToString(); // Update the text with the score value.
-        backgroundText.text = scoreText.text;
+
+       scoreText.text = "Score: " + m_iScore.ToString(); // Update the text with the score value.
+       backgroundText.text = scoreText.text;
     }
 
     void Update()
@@ -39,6 +40,12 @@ public class Manager : MonoBehaviour
         scoreText.text = "Score: " + m_iScore.ToString(); // Update the text with the score value.
         backgroundText.text = scoreText.text;
     }
+
+    IEnumerator WaitASec()
+    {
+        yield return new WaitForSeconds(1);
+    }
+
 /*
     void RestartGame()
     {
