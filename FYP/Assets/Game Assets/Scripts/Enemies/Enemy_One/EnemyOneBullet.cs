@@ -27,7 +27,7 @@ public class EnemyOneBullet : Bullet
     // Update is called once per frame
     void Update()
     {
-        pos += transform.up * Time.deltaTime * -m_fSpeed; // Make the enemy move down the screen.
+        pos += transform.up * Time.deltaTime * -m_fSpeed; // Make the bullet move down the screen.
         transform.position = pos + transform.right * Mathf.Sin(Time.time * m_fWaveFrequency) * m_fMovingMagnitude; // Move it in a sine wave.
         transform.localScale = new Vector3(4f, 4f, 4f) * Mathf.Sin(m_fWaveFrequency * Time.time) * m_fMagnitude; // Scale the bullet in a sine wave.
     }

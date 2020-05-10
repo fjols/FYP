@@ -79,6 +79,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Menu Scripts\MenuController.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Menu Scripts\TypingText.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Networking\PlayerUnit.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Planet\Bobble.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Planet\Rotate.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Players\Controller.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Players\PlayerOne\PlayerOneController.cs" />
@@ -91,9 +92,13 @@
      <Compile Include="Assets\Game Assets\Scripts\SamePC\Enemies\EnemyOne\EnemyOneManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\SamePC\Enemies\EnemyThree\EnemyThreeManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\SamePC\Enemies\EnemyTwo\EnemyTwoManager.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\SamePC\EnemyOneBulletSP.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\SamePC\EnemyThreeBulletSP.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\SamePC\EnemyTwoBulletSP.cs" />
      <Compile Include="Assets\Game Assets\Scripts\SamePC\Player\Bullet\PlayerBullets.cs" />
      <Compile Include="Assets\Game Assets\Scripts\SamePC\Player\PlayerControllerOne.cs" />
      <Compile Include="Assets\Game Assets\Scripts\SamePC\Player\PlayerShoot.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\SamePC\SamePCBullet.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Shiponomicon\Back.cs" />
      <Compile Include="Assets\MoveForwards.cs" />
      <Compile Include="Assets\Shield.cs" />

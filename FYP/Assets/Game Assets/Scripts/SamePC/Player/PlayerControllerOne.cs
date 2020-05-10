@@ -54,6 +54,7 @@ public class PlayerControllerOne : MonoBehaviour
         {
             m_iHealth--;
             healthText.text = "Health: " + m_iHealth;
+            Debug.Log("Health" + m_iHealth);
             if(m_iHealth <= 0)
             {
                 m_bDead = true;

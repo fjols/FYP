@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8679472807438326309}
   - component: {fileID: 2391764016230134422}
   - component: {fileID: -1728820671086055934}
-  - component: {fileID: 4066889350644190037}
+  - component: {fileID: -4090855467235108427}
+  - component: {fileID: -4906631617843800025}
   m_Layer: 0
   m_Name: EnemyTwoBullet
   m_TagString: EnemyTwoBullet
@@ -108,7 +109,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.05, y: 0.05}
   m_EdgeRadius: 0
---- !u!114 &4066889350644190037
+--- !u!50 &-4090855467235108427
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2709543156378822285}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &-4906631617843800025
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,10 +139,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2709543156378822285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 901548ef08cd69b44b2be926f35d0ab9, type: 3}
+  m_Script: {fileID: 11500000, guid: 17a1bae5bbb2d124bba1622428e2e4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_fSpeed: 3
-  m_fLifetime: 7
+  m_fSpeed: 2
+  m_fLifetime: 5
   m_fWaveFrequency: 2
   m_fMagnitude: 2
