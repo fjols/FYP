@@ -127,11 +127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -4906631617843800025, guid: c33e686b640c11d4cbab5298d22be95e,
-        type: 3}
-      propertyPath: m_fSpeed
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2709543156378822285, guid: c33e686b640c11d4cbab5298d22be95e,
         type: 3}
       propertyPath: m_Name
@@ -190,6 +185,11 @@ PrefabInstance:
     - target: {fileID: 8679472807438326309, guid: c33e686b640c11d4cbab5298d22be95e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4906631617843800025, guid: c33e686b640c11d4cbab5298d22be95e,
+        type: 3}
+      propertyPath: m_fSpeed
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -282,7 +282,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 2ae2a592479ed5f40b1bb5c49816b121, type: 3}
+    m_Font: {fileID: 12800000, guid: 86ded4df452f86b4b9c93da62f4fb77f, type: 3}
     m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
@@ -427,7 +427,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 2ae2a592479ed5f40b1bb5c49816b121, type: 3}
+    m_Font: {fileID: 12800000, guid: 86ded4df452f86b4b9c93da62f4fb77f, type: 3}
     m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
@@ -547,11 +547,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -4005384689863286353, guid: 17e54e8293999f3458679e32e8c84286,
-        type: 3}
-      propertyPath: m_fSpeed
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7383777231487619136, guid: 17e54e8293999f3458679e32e8c84286,
         type: 3}
       propertyPath: m_Name
@@ -612,6 +607,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4005384689863286353, guid: 17e54e8293999f3458679e32e8c84286,
+        type: 3}
+      propertyPath: m_fSpeed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e54e8293999f3458679e32e8c84286, type: 3}
 --- !u!1001 &728508747
@@ -621,11 +621,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5097976435149597754, guid: 18ec315a794b4b64797a6ae4b4b2a34f,
-        type: 3}
-      propertyPath: m_fSpeed
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3571909150127785115, guid: 18ec315a794b4b64797a6ae4b4b2a34f,
         type: 3}
       propertyPath: m_Name
@@ -684,6 +679,11 @@ PrefabInstance:
     - target: {fileID: 1401592608196624728, guid: 18ec315a794b4b64797a6ae4b4b2a34f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097976435149597754, guid: 18ec315a794b4b64797a6ae4b4b2a34f,
+        type: 3}
+      propertyPath: m_fSpeed
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
