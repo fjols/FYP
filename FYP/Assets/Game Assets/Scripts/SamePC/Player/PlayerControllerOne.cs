@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 // PLAYER CONTROLLER FOR SAME PC GAME.
 public class PlayerControllerOne : MonoBehaviour
@@ -22,16 +23,15 @@ public class PlayerControllerOne : MonoBehaviour
     public Transform firePoint; // Where the bullet spawns.
     [Tooltip("How much health a player has.")]
     public int m_iHealth = 3; // Amount of hits the player can take. One hit = 1 health lost.
-    public Animator m_anim; // The animator component.
+    //public Animator m_anim; // The animator component.
     public bool m_bDead = false; // Is the player dead.
 
-    public Text healthText; // Player health text.
+
 
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
-        m_anim = GetComponent<Animator>();
-        healthText.text = "Health: " + m_iHealth;
+        //m_anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -53,14 +53,14 @@ public class PlayerControllerOne : MonoBehaviour
         else
         {
             m_iHealth--;
-            healthText.text = "Health: " + m_iHealth;
             Debug.Log("Health" + m_iHealth);
             if(m_iHealth <= 0)
             {
                 m_bDead = true;
                 m_fSpeed = 0;
-                m_anim.SetBool("Death", m_bDead);
-                Destroy(gameObject, 1f);
+               // m_anim.SetBool("Death", m_bDead);
+                Destroy(gameObject);
+                SceneManager.LoadScene("death");
             }
             m_bDead = false;
         }

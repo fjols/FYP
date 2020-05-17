@@ -44,6 +44,11 @@ public class MenuController : MonoBehaviour
         loadScene(scene);
     }
 
+    public void LoadSamePCGame()
+    {
+        loadScene(scene);
+    }
+
     void loadScene(string scene_)
     {
         scene_ = scene;

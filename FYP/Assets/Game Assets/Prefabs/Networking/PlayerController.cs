@@ -17,23 +17,12 @@ public class PlayerController : MonoBehaviour
     public Shake shake; // Shake class object. (Shake.cs).
    // public GameObject camContainer; // Gameobject which contains the camera.
     public float shakeStrength = 0.1f; // Strength of the shake.
-    public Animator m_anim; // The animator component.
     public bool m_bDead = false; // Is the player dead.
 
-    public Text healthText; // Player health text.
-
-    public Powerup _healthPowerUp;
-
-    void Awake()
-    {
-       // shake = camContainer.GetComponent<Shake>();
-    }
     // Start is called before the first frame update
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>(); // Get the component.
-        m_anim = GetComponent<Animator>(); // Get the animator component.
-        healthText.text = "Health: " + m_iHealth; // Update the text.
     }
 
     void FixedUpdate()
@@ -59,26 +48,16 @@ public class PlayerController : MonoBehaviour
         {
             m_bDead = false;
         }
-        else if(col.gameObject.tag == "Powerup")
-        {
-            m_bDead = false;
-            m_iHealth = _healthPowerUp.healthIncrease;
-            healthText.text = "Health: " + m_iHealth.ToString();
-        }
         else
         {
             m_iHealth--;
-            healthText.text = "Health: " + m_iHealth;
             if(m_iHealth <= 0)
             {
                 m_bDead = true; // Set it to true it will play the death animation.
                 m_fSpeed = 0; // Set speed to 0.
-                m_anim.SetBool("Death", m_bDead); // Set the animator to play the animation
-                Destroy(gameObject, 1f); // Destroy the enemy after the animations played.
-                //shake.CameraShake(shakeStrength, 0.5f); // Shake the camera.   
+                Destroy(gameObject); // Destroy the enemy after the animations played.
             }
-            m_bDead = false; // Set it to true it will play the death animation.
-            //shake.CameraShake(shakeStrength, 0.5f); // Shake the camera.   
+            m_bDead = false; // Set it to true it will play the death animation. 
         }
     }
 }

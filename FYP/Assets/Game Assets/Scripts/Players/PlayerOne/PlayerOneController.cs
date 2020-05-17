@@ -22,29 +22,16 @@ public class PlayerOneController : NetworkBehaviour
     [Tooltip("The point from which the bullets fire.")]
     public Transform firePoint; // Where the bullet spawns.
     [Tooltip("How much health a player has.")]
-    public int m_iHealth = 3; // Amount of hits the player can take. One hit = 1 health lost.
-    public Animator m_anim; // The animator component.
+    public int m_iHealth = 30; // Amount of hits the player can take. One hit = 1 health lost.
+    //public Animator m_anim; // The animator component.
     public bool m_bDead = false; // Is the player dead.
+    [SyncVar] private Vector3 syncPos; // The position to be synced using command function.
+    [SyncVar] private int syncHealth; // The health to be synced using command function.
+    private float m_fLerpFactor = 15.0f; // The factor of which to lerp at.
 
-    public Text healthText; // Player health text.
-
-    public Powerup _healthPowerUp;
-
-    private Vector3 bestGuessPosition;
-
-    [SyncVar] private Vector3 syncPos;
-    private float m_fLerpFactor = 15.0f;
-
-    void Awake()
-    {
-       // shake = camContainer.GetComponent<Shake>();
-    }
-    // Start is called before the first frame update
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>(); // Get the component.
-        m_anim = GetComponent<Animator>(); // Get the animator component.
-        healthText.text = "Health: " + m_iHealth;
     }
 
     // Update is called once per frame
@@ -61,6 +48,7 @@ public class PlayerOneController : NetworkBehaviour
             m_moveVel = moveInput.normalized * m_fSpeed; // Move velocity.
             transform.position += m_moveVel * Time.deltaTime; // Move the player.
             TransmitPosition();
+            TransmitHealth();
             LerpPosition();
         }
     }
@@ -69,6 +57,12 @@ public class PlayerOneController : NetworkBehaviour
     void CmdUpdateMovement(Vector3 pos)
     {
         syncPos = pos;
+    }
+
+    [Command]
+    void CmdUpdateHealth(int health)
+    {
+        syncHealth = health;
     }
 
     void LerpPosition()
@@ -83,6 +77,12 @@ public class PlayerOneController : NetworkBehaviour
         CmdUpdateMovement(transform.position);
     }
 
+    [ClientCallback]
+    void TransmitHealth()
+    {
+        CmdUpdateHealth(m_iHealth);
+    }
+
 
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -90,29 +90,20 @@ public class PlayerOneController : NetworkBehaviour
         {
             m_bDead = false;
         }
-        else if(col.gameObject.tag == "Powerup")
-        {
-            m_bDead = false;
-            m_iHealth = _healthPowerUp.healthIncrease;
-            healthText.text = "Health: " + m_iHealth.ToString();
-        }
         else if(col.gameObject.CompareTag("EnemyOneBullet") || col.gameObject.CompareTag("EnemyTwoBullet") ||
                 col.gameObject.CompareTag("EnemyThreeBullet") || col.gameObject.CompareTag("BossBullet"))
         {
             m_iHealth--;
-            healthText.text = "Health: " + m_iHealth;
+            //healthText.text = "Health: " + m_iHealth;
             if(m_iHealth <= 0)
             {
                 m_bDead = true; // Set it to true it will play the death animation.
                 m_fSpeed = 0; // Set speed to 0.
-                m_anim.SetBool("Death", m_bDead); // Set the animator to play the animation
-                Destroy(gameObject, 1f); // Destroy the enemy after the animations played.
-                //shake.CameraShake(shakeStrength, 0.5f); // Shake the camera.   
+                Destroy(gameObject); // Destroy the enemy after the animations played.
                 Debug.Log("Health: " + m_iHealth);
                 SceneManager.LoadScene("death");
             }
             m_bDead = false; // Set it to true it will play the death animation.
-            //shake.CameraShake(shakeStrength, 0.5f); // Shake the camera.   
         }
     }
 }

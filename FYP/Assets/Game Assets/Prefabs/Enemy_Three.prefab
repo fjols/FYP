@@ -145,7 +145,7 @@ MonoBehaviour:
   m_bullet: {fileID: 7383777231487619136, guid: 17e54e8293999f3458679e32e8c84286,
     type: 3}
   m_firePoint: {fileID: 5086157223894634169}
-  m_fShootingCoolDown: 0.1
+  m_fShootingCoolDown: 0.5
 --- !u!50 &5086157223766743479
 Rigidbody2D:
   serializedVersion: 4

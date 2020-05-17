@@ -146,19 +146,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 485061384}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7937, y: 1.7937, z: 1.7937}
+  m_LocalScale: {x: 1.7937002, y: 1.7937002, z: 1.7937002}
   m_Children:
   - {fileID: 2035457155}
   - {fileID: 1270997921}
   m_Father: {fileID: 1157831956}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -313, y: -242}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -293.95398, y: -236.7094}
+  m_SizeDelta: {x: 181.23, y: 35.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &485061386
 MonoBehaviour:
@@ -367,12 +367,12 @@ RectTransform:
   m_Children:
   - {fileID: 1128165220}
   m_Father: {fileID: 1157831956}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 166.79999, y: 57}
-  m_SizeDelta: {x: 333.6, y: 86}
+  m_AnchoredPosition: {x: 162, y: 54.8}
+  m_SizeDelta: {x: 482.7, y: 90.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &642564729
 MonoBehaviour:
@@ -395,7 +395,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 2ae2a592479ed5f40b1bb5c49816b121, type: 3}
+    m_Font: {fileID: 12800000, guid: 86ded4df452f86b4b9c93da62f4fb77f, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -447,12 +447,12 @@ RectTransform:
   m_Children:
   - {fileID: 2025651257}
   m_Father: {fileID: 1157831956}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: 250}
-  m_SizeDelta: {x: 333.6, y: 86}
+  m_AnchoredPosition: {x: 148, y: 218}
+  m_SizeDelta: {x: 565.9, y: 145.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1091764749
 MonoBehaviour:
@@ -475,7 +475,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 2ae2a592479ed5f40b1bb5c49816b121, type: 3}
+    m_Font: {fileID: 12800000, guid: 86ded4df452f86b4b9c93da62f4fb77f, type: 3}
     m_FontSize: 84
     m_FontStyle: 0
     m_BestFit: 0
@@ -530,8 +530,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015258789, y: 2.9999847}
-  m_SizeDelta: {x: 333.6, y: 86}
+  m_AnchoredPosition: {x: 15, y: -6.5}
+  m_SizeDelta: {x: 505.8, y: 104.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1128165221
 MonoBehaviour:
@@ -554,7 +554,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 2ae2a592479ed5f40b1bb5c49816b121, type: 3}
+    m_Font: {fileID: 12800000, guid: 86ded4df452f86b4b9c93da62f4fb77f, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -665,11 +665,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 485061385}
   - {fileID: 1091764748}
   - {fileID: 1639643075}
   - {fileID: 642564728}
   - {fileID: 1998476228}
-  - {fileID: 485061385}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -712,8 +712,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015258789, y: 2.9999847}
-  m_SizeDelta: {x: 333.6, y: 86}
+  m_AnchoredPosition: {x: 6, y: 1.1761}
+  m_SizeDelta: {x: 463.8, y: 89.648}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1248544527
 MonoBehaviour:
@@ -736,7 +736,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 2ae2a592479ed5f40b1bb5c49816b121, type: 3}
+    m_Font: {fileID: 12800000, guid: 86ded4df452f86b4b9c93da62f4fb77f, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -784,15 +784,15 @@ RectTransform:
   m_GameObject: {fileID: 1270997920}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999443, y: 0.9999443, z: 0.9999443}
+  m_LocalScale: {x: 0.99994445, y: 0.99994445, z: 0.99994445}
   m_Children: []
   m_Father: {fileID: 485061385}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.6999998}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.18182373, y: -0.14952087}
+  m_SizeDelta: {x: 0.37005615, y: -1.800003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1270997922
 MonoBehaviour:
@@ -815,7 +815,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 2ae2a592479ed5f40b1bb5c49816b121, type: 3}
+    m_Font: {fileID: 12800000, guid: 86ded4df452f86b4b9c93da62f4fb77f, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -867,12 +867,12 @@ RectTransform:
   m_Children:
   - {fileID: 1248544526}
   m_Father: {fileID: 1157831956}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 166.8, y: 155}
-  m_SizeDelta: {x: 333.6, y: 86}
+  m_AnchoredPosition: {x: 153, y: 153.3}
+  m_SizeDelta: {x: 452.8, y: 87.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1639643076
 MonoBehaviour:
@@ -895,7 +895,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 2ae2a592479ed5f40b1bb5c49816b121, type: 3}
+    m_Font: {fileID: 12800000, guid: 86ded4df452f86b4b9c93da62f4fb77f, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -1010,8 +1010,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640529574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.1343427, y: 0.69, z: 0}
-  m_LocalScale: {x: 25.591, y: 25.591, z: 25.591}
+  m_LocalPosition: {x: -5.63, y: 0.69, z: 0}
+  m_LocalScale: {x: 22.520079, y: 22.520079, z: 22.520079}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1050,8 +1050,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: 2.9999847}
-  m_SizeDelta: {x: 368, y: 86}
+  m_AnchoredPosition: {x: 0, y: 3}
+  m_SizeDelta: {x: 636.8, y: 95.097}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1914810259
 MonoBehaviour:
@@ -1074,7 +1074,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 2ae2a592479ed5f40b1bb5c49816b121, type: 3}
+    m_Font: {fileID: 12800000, guid: 86ded4df452f86b4b9c93da62f4fb77f, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -1126,12 +1126,12 @@ RectTransform:
   m_Children:
   - {fileID: 1914810258}
   m_Father: {fileID: 1157831956}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 186.2, y: -42}
-  m_SizeDelta: {x: 372.4, y: 86}
+  m_AnchoredPosition: {x: 187, y: -48.5}
+  m_SizeDelta: {x: 634.9, y: 98.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1998476229
 MonoBehaviour:
@@ -1154,7 +1154,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 2ae2a592479ed5f40b1bb5c49816b121, type: 3}
+    m_Font: {fileID: 12800000, guid: 86ded4df452f86b4b9c93da62f4fb77f, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -1209,8 +1209,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015258789, y: 2.9999847}
-  m_SizeDelta: {x: 333.6, y: 86}
+  m_AnchoredPosition: {x: -3, y: 18}
+  m_SizeDelta: {x: 562.5, y: 118.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2025651258
 MonoBehaviour:
@@ -1233,7 +1233,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 2ae2a592479ed5f40b1bb5c49816b121, type: 3}
+    m_Font: {fileID: 12800000, guid: 86ded4df452f86b4b9c93da62f4fb77f, type: 3}
     m_FontSize: 84
     m_FontStyle: 0
     m_BestFit: 0
@@ -1279,7 +1279,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035457154}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1288,8 +1288,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.18182373, y: -0.9495392}
+  m_SizeDelta: {x: 0.37005615, y: -1.800003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2035457156
 MonoBehaviour:
@@ -1312,7 +1312,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 2ae2a592479ed5f40b1bb5c49816b121, type: 3}
+    m_Font: {fileID: 12800000, guid: 86ded4df452f86b4b9c93da62f4fb77f, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
